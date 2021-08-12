@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+	div{
+		margin: 0;
+	}
+	#search{
+		width: 200px;
+	}
+	#wrapper{
+		width: 630px;
+	}
+	#cons {
+		border: 1px solid red;
+	}
+	#cons > div{
+		width: 150px;
+		display: inline-block;
+		text-align: center;
+		
+	}
+</style>
+<body>
+
+<div id="wrapper">
+	<input type="text" id="search" placeholder="종류 이름으로 검색해 주세요.">
+	<input type="button" id="btn" value="검색">
+	<br><br>
+	<div id="cons">
+		<div>id</div>
+		<div>이름</div>
+		<div>종류</div>
+		<div>가격</div>
+	</div>
+</div>
+</body>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		
+		$("#btn").click(function(){
+			
+			function log(ttt){
+				
+				var aa = $("<div>")
+				aa.html(ttt)
+				$("#cons").append(aa)
+			}
+		
+			$.ajax({
+				url:"search.jsp",
+				data:{search:$("#search").val()},
+				dataType:'json',
+				
+				success:function(ddd){
+					for(i in ddd){
+						log(ddd[i].id)
+						log(ddd[i].name)
+						log(ddd[i].kind)
+						log(ddd[i].price)
+					}
+				},
+				
+				error:function(e){
+					alert("실패" + e.responseText)
+				}
+			})
+			
+		})
+	})
+</script>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="di.model.Phone" name="phone1" p:name="어른폰"
+		p:company="삼성" p:price="100000" autowire="byType" p:cam-ref="cam1"
+		p:bat-ref="bat1" p:scrn-ref="scrn1"/>
+	
+	<bean class="di.model.Phone" name="phone2" p:name="은하수폰"
+		p:company="애플" p:price="300000" autowire="byName" />
+		
+		
+	<bean class="di.model.Camera" name="cam1"
+		p:kind="고성능" p:scope="500" />
+	<bean class="di.model.Battery" name="bat1"
+		p:charge="100" />
+	<bean class="di.model.Screen" name="scrn1"
+		p:size="12" p:kind="1" />
+
+
+</beans>
