@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb10</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<div id="box">
+	
+		<p id="first">1번째</p>
+		<p>2번째</p>
+		<p>3번째</p>
+		<p id="last">4번째</p>
+		
+	</div>
+	
+	<input type="button" value="박스안에 p태그 추가" onclick="append()">
+	
+	
+<script>
+
+	function append() {
+		var newtag = document.createElement("<p>");
+		newtag.innerText = "다음번째 추가내용";
+		var parentTag = document.getElementById("box");
+		parentTag.appendChild(newtag);
+		
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body {
+	background-color: #efefef;
+	font-family: "courier New", Courier, monospace;
+	letter-spacing: 0.15em;
+}
+
+#page {
+	width: 940px;
+	margin: 10px auto;
+	padding: 20px;
+	border: 4px double #000000;
+	background-color: #ffffff;
+}
+#logo {
+	width: 150px;
+	margin: 10px auto 25px auto;
+}
+ul#nav {
+	width: 570px;
+	padding: 15px;
+	margin: 0px auto;
+	border-top: 2px solid #000000;
+	border-bottom: 1px solid #000000;
+	text-align: center;
+}
+#nav li {
+	margin: 0px 3px;
+	border-right: 1px solid black;
+}
+
+/* 타이포 그라피 : 글자 색상, 종류 정리 */
+
+p {
+	text-align:center;
+	width: 600px;
+	margin: 20px auto;
+}
+a {
+	text-decoration: none;
+	color: #000000;
+	padding: 6px 22px;
+}
+a.on, a:hover {
+	color: #cc3333;
+	background-color: #ffffff;
+}

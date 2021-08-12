@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h2>자바스크립트 샘플5</h2>
+	<p>prompt를 이용해서 키보드입력을 받고 암호체크</p>
+	<input type="button" value="아이디와 암호를 입력합니다." onclick="checkPassword();">
+	
+<script>
+	function checkPassword(){
+		id = prompt("아이디를 입력하시오","");
+		passwd = prompt("암호를 입력하시오.","");
+		if(id=="java"){
+			if(passwd=="1234"){
+				location.href="http://www.naver.com";
+			}else{
+				alert("비밀번호를 틀렸습니다.");
+			}
+		}else{
+			alert("아이디를 확인 해주세요.");
+		}
+</script>
+</body>
+</html>

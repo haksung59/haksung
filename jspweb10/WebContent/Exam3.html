@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+
+<script>
+	// 배열을 선언하고
+	// 키보드로 입력을 받아서 (점수들을)
+	// 배열에 저장한다.
+	
+	//총합과 평균을 구하시오.
+	
+	var sum = 0;
+	var input = new Array();
+	
+	for(i=0; i<100; i++){
+		input[i] = parseInt(prompt("점수를 입력하시오.",""));
+		if(input[i]==0) break;
+		sum += input[i];
+	}document.write("총합 : "+sum);
+	document.write("평균 : "+(sum/(input.length-1)));
+	
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h3>속성선택자-폼컨트롤 주로 이용</h3>
+	<p><input type="text" value="" placeholder="이름"></p>
+	<p><input type="password" value="" placeholder="비번"></p>
+	<p><input type="radio" value="" name="mil">군필&nbsp;
+		<input type="radio" value="" name="mil">미필</p>
+	<p><input type="checkbox" value="">이메일발송여부</p>
+	<p><input type="file" value=""></p>
+
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	//$("input[type='text']").val("이강호"); // val() 폼컨트롤에 값변경
+	$("input[type='text']").attr("placeholder","test");	// attr->속성값 변경 // 속성값: ex) value, placeholder 등
+	$("input[type='password']").css("background-color","lightblue");
+</script>
+</body>
+</html>

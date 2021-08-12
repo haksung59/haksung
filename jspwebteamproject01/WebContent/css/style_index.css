@@ -1,0 +1,248 @@
+body {
+	margin: 0;
+	font-family: "nsk","맑은고딕","Malgun Gothic", SimHei, Sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,"FangSong", "仿宋", STFangSong, "华文仿宋","Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",AppleGothic,Dotum,arial,sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: 0px;
+	padding: 0;
+	border: 0;
+	vertical-align: top;
+}
+
+/* header 영역 */
+header {
+	margin: 0 auto;
+	background-color: none;
+	height: 100px;
+	width: 1000px;
+}
+
+div#logo {
+	width: 193px;
+	height: 85px;
+	float: left;
+	margin: 0;
+}
+
+div#logo img {
+	width: 193px;
+	height : 85px;
+	margin: 0;
+}
+
+nav {
+	float: left;
+	height: 85px;
+	margin: 0;
+	line-height: 75px;
+}
+
+ul.menu {
+	margin-left: 20px;
+	width: 600px;
+	list-style-type : none;
+}
+
+ul.menu>li {
+	margin: 0;
+	width: 120px;
+	height: 100%;
+	float: left;
+	background-color: none;
+}
+
+ul.menu>li a {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+ul.menu>li a:hover {
+	color: #668a0a;
+}	
+
+ul.sub {
+	background-color: none;
+	list-style-type: none;
+	width: 840px;
+	float: left;
+	height: 20px;
+	position: relative;
+	left: -120px;
+}
+#product ul.sub {
+	background-color: none;
+	list-style-type: none;
+	width: 840px;
+	float: left;
+	height: 20px;
+	position: relative;
+	left: -70px;
+}
+ul.sub>li {
+	float: left;
+	padding-right: 20px;
+	background-color: none;
+}
+
+div.menu_list_wrap a {
+	border-radius: 100px;
+	font-size: 10px;
+	background-color: #eee;
+	color: #9162e4;
+	margin: 0;
+	padding: 2px 5px;
+}
+a {
+	text-decoration: none;
+}
+
+
+/* div.slideshow {
+	position: relative;
+} */
+
+div.myslide>img {
+	width: 100%;
+	height: 500px;
+	border-top: 1px solid black;
+}
+
+a.prev, a.next {
+	position: absolute;
+	color: #ffffff;
+	top: 40%;
+	padding: 20px;
+	margin-top: -20px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+a.next {
+	right: 0%;
+}
+
+a.next:hover, a.prev:hover {
+	background-color: rgba(0,0,0,0.5);
+}
+
+p#button {
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+span#slide {
+	background-color: black;
+	color: #ffffff;
+}
+
+/* section 영역*/
+
+section {
+	width: 950px;
+	margin: 0 auto;
+}
+div.suggest {
+	width: 100%;
+	height: 350px;
+	margin: 0 0 20px 0;
+}
+
+div.favorite {
+	width: 100%;
+	height: 350px;
+	margin: 10px 0 30px 0;
+}
+
+section>div>img#logo {
+	width: 100%;
+}
+
+figure>a>img#product, figure>a>img#favorite {
+	width: 150px;
+	height: 150px;
+}
+
+#more {
+	width: 100%;
+	text-align: right;
+}
+#more a {
+	left: 100%;
+	color: red;
+	text-decoration: none;
+	margin-right: 10px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+#more a:hover {
+	color: green;
+}
+
+figure {
+	float: left;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-top: 55px;
+	text-align: center;
+}
+
+figcaption {
+	font-weight: bold;
+}
+
+span#price {
+	color: green;
+	background-color: #ffffff;
+	margin-top: 10px;
+}
+
+/* footer */
+
+footer {
+	background-color: #ccff90;
+	border-top : 2px solid #7ecb20;
+	height: 100px;
+	font-size: 10px;
+}
+#f_total {
+	width: 1000px;
+	height: 100px;
+	margin: auto;
+}
+
+span#f_logo {
+	width: 152px;
+	height: 75px;
+	float: left;
+	margin-right: 10px 30px 0 20px;
+}
+span#f_logo img{
+	width: 100%;
+	height: 100%;
+}
+footer #f_tt {
+	height: 100px;
+	padding: 10px 0;
+}
+footer #f_menu {
+	margin-top: 5px;
+}
+footer #f_menu a {
+	margin-right: 5px;
+	color: black;
+	text-decoration: none;
+}
+
+
+
+
+

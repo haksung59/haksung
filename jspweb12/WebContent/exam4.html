@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css">
+</style>
+</head>
+<body>
+	
+	<h3>아래 원을 클릭하면 이미지 변경</h3>
+
+	<div>
+		<img id="imgslide" src="images/img1.gif">
+	</div>
+	
+	<p>
+		<span id="img1">1</span>
+		<span id="img2">2</span>
+		<span id="img3">3</span>
+		<span id="img4">4</span>
+	</p>
+	
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	$(document).ready(function(){
+		$("#img1").click(function(){
+			$("#imgslide").attr("src","images/img1.gif");
+		});
+		$("#img2").click(function(){
+			$("#imgslide").attr("src","images/img2.gif");
+		});
+		$("#img3").click(function(){
+			$("#imgslide").attr("src","images/img3.gif");
+		});
+		$("#img4").click(function(){
+			$("#imgslide").attr("src","images/img4.gif");
+		});
+	});
+	$("span").css("width","100px").css("height","100px;");
+	$("span").css("background-color","pink").css("padding","8px 15px");
+	$("span").css("font-size","150%").css("border-radius","20px");
+	$("body").css("text-align","center");
+	$("span").css("margin-right", " 10px");
+
+</script>
+</body>
+</html>

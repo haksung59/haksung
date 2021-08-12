@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css">
+	body {
+		font-size: 12px;
+	}
+	input[id="cb1"] + label{
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		border: 2px solid #bcbcbc;
+		border-radius: 3px;
+		cursor: pointer;
+		background-color: #cccccc;
+	}
+	input[id="cb1"]:checked + label {
+      background-color: #333333;
+   }
+	input[id="cb1"] {
+      display: none;
+   }
+</style>
+</head>
+<body>
+	<h3>폼컨트롤 선택자 에제</h3>
+
+	<div>
+		<span><a href="http://jquery.com">jQuery</a></span>
+		<br>
+		<a href="mailto:nailoc23@naver.com">자바강사 메일주소</a>
+		<p>
+			<input type="button" value="클릭~">
+			<input type="checkbox" id="cb1">
+			<label for="cb1"></label>
+			<input type="radio">
+		</p>
+		
+		<div id="book">디지털 웹디자인 & 웹개발</div>
+		<br>
+		<b>웹표준-제이쿼리</b>
+		<span>HTML & CSS</span><br>
+		<b>HTML5</b><span>반응형웹</span><br>
+		<b>자바스크립트</b><span>제이쿼리</span>
+	</div>
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	$("div>a").css("background-color","skyblue");
+	$("div input:button").css("background-color","yellow");
+	$("#book").css("border","2px solid blue");
+	$("b").css("background-color", "gray")
+		.css("font-weight", "bold");
+	
+</script>
+</body>
+</html>

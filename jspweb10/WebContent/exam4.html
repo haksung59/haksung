@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+
+<script>
+	// 단을 입력을 받고
+	// 구구단 결과를 배열에 저장
+	// 그것을 출력하시오.
+	
+	var dan = parseInt(prompt("단을 입력하시오",""));
+	
+	Gugu = new Array(9);
+	
+	function cal(){
+		for(i=0; i<Gugu.length; i++){
+			Gugu[i] = dan*(i+1);
+			document.write(dan+"*"+(i+1)+"="+Gugu[i]+"<br>");
+		}
+	}
+	cal();
+	
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h3>필터선택자 & 필터메소드와 비교</h3>
+
+	<h4>제목타이틀 - 0</h4>
+	<h4>제목타이틀 - 1</h4>
+	<h4>제목타이틀 - 2</h4>
+	<h4>제목타이틀 - 3</h4>
+	<h4>제목타이틀 - 4</h4>
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	// 필터선택자
+	$("h4:even").css("background-color","yellow");
+	
+	//필터메소드
+	$("h4").filter(":even").css("color", "red");
+	// each 함수와 같이 쓰면 효과적으로 제어 가능.
+	// 필터메소드 안에 다른 함수를 써서 제어 가능.
+	
+	// eq() 필터메소드 : 해당순서로 찾는 함수.
+	$("h4").eq(2).text("필터로 선택하여 변경");		//인덱스가 2번째
+	$("h4").eq(3).text("필터로 선택하여 변경");		//인덱스가 3번째
+	// 인덱스 값이 있어서 for문과 같이 해서 제어 가능.
+
+</script>
+</body>
+</html>

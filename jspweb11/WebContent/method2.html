@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	var scores = [90, 80, 90, 60, 100];
+	
+	for(i=0; i<scores.length; i++){
+		document.write(i+"번째는"+scores[i]+"<br>");
+	}
+	
+	$.each(scores, function(index, value){
+		console.log(index + "번째값: "+value);
+	});
+</script>
+</body>
+</html>

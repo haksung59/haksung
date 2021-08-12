@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h2>간단한 계산기</h2>
+	<p><input type="text" value="" id="no1"></p>
+	<p>
+		<input type="button" value="+" onclick="plus()">
+		<input type="button" value="-" onclick="minus()">
+		<input type="button" value="x" onclick="mul()">
+		<input type="button" value="/" onclick="div()">
+	</p>
+	<p><input type="text" value="" id="no2"></p>
+	<p>=<input type="text" value="" id="no3"></p>
+<script>
+	function plus() {
+		num1 = document.getElementById("no1").value;
+		num2 = document.getElementById("no2").value;
+		num3 = parseInt(num1)+parseInt(num2);
+		document.getElementById("no3").value = num3;
+	}
+	function minus() {
+		num1 = document.getElementById("no1").value;
+		num2 = document.getElementById("no2").value;
+		num3 = parseInt(num1)-parseInt(num2);
+		document.getElementById("no3").vlaue = num3;
+	}
+	function mul() {
+		num1 = document.getElementById("no1").value;
+		num2 = document.getElementById("no2").value;
+		num3 = parseInt(num1)*parseInt(num2);
+		document.getElementById("no3").vlaue = num3;
+	}
+	function div() {
+		num1 = document.getElementById("no1").value;
+		num2 = document.getElementById("no2").value;
+		num3 = parseInt(num1)/parseInt(num2);
+		document.getElementById("no3").vlaue = num3;
+	}
+</script>
+</body>
+</html>

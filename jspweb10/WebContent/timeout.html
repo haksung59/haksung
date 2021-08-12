@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h3>3초후에 해당페이지로 이동하시오</h3>
+	
+	<input type="button" value="타이머1 멈춤" onclick="stop();">
+<script>
+	
+	id_1 = setTimeout("moveTo()", 3000);
+	
+	function moveTo(){
+		location.href='calc.html';
+	}
+	function stop() {
+		clearTimeout(id_1);
+	}
+</script>
+</body>
+</html>

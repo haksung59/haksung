@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h2>회원가입</h2>
+	<p><input type="text" placeholder="아이디" id="userid"></p>
+	<p><input type="password" placeholder="비밀번호" id="userpw"></p>
+	<p><input type="password" placeholder="비밀번호" id="repw"></p>
+	<p><input type="text" placeholder="이메일" id="useremail"></p>
+	<p><input type="button" value="가입하기" onclick="join()"></p>
+<script>
+	function join(){
+		id=document.getElementById("userid").value;
+		if(id==""){
+			alert("아이디를 입력하시오.");
+			return; //하위코드는 실행이 안되도록.
+		}
+		pw=document.getElementById("userpw").value;
+		if(pw==""){
+			alert("비밀번호를 입력하시오.");
+			return;
+		}
+		email=document.getElementById("useremail").value;
+		if(email==""){
+			alert("이메일을 입력하시오.");
+			return;
+		}
+		
+		pwch=document.getElementById("repw").value;
+		if(pw != pwch) {
+			alert("비밀번호가 맞지 않습니다!");
+		}else{
+			alert("회원가입 성공!");
+			location.href="exam10.html";
+		}
+	}
+</script>
+</body>
+</html>

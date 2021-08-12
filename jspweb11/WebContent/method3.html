@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css">
+	.sel{
+		color: red;
+	}
+</style>
+</head>
+<body>
+
+	<h3>each반복문을 사용해서 addClass넣기</h3>
+	
+	<div>체크박스</div>
+	<div>체크박스</div>
+	<div>체크박스</div>
+	<div>체크박스</div>
+	<div>체크박스</div>
+	<p><input type="button" value="전체선택" onclick="AllSel();">
+	&nbsp;<input type="button" value="전체해제" onclick="AllCan();"></p>
+
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+
+	function AllSel(){
+		$("div").each(function(){
+			$(this).addClass("sel");
+		});
+	}
+	
+	function AllCan(){
+		$("div").each(function(){
+			$(this).removeClass("sel");
+		});
+	}
+</script>
+</body>
+</html>

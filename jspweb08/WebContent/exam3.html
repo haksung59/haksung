@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HTML5/CSS3 웹페이지 연습</title>
+	<meta charset="utf-8" />
+	
+	<style type="text/css">
+		
+		body{
+			background-image: url('images/bg.png');
+			color: #000305;
+			font-size: 14px; /* Base font size is 14px */
+			font-family: Arial, Verdana;
+			line-height: 1.4em;
+			margin: 0 auto;
+			padding: 0;
+			text-align: left;
+			width: 70%;
+		}
+		/* 헤더 영역 */
+		header.mainHeader img {
+			width: 30%;
+			margin: 2% 0px;
+		}
+		.mainHeader nav {
+			background-color: #666666;
+			height: 40px;
+			line-height: 40px;
+			margin: 0px auot;
+			border-radius: 5px;
+		}
+		.mainHeader nav ul {
+			list-style-type: none;
+			margin: auto;
+		}
+		.mainHeader nav ul li {
+			float: left;
+		}
+		.mainHeader nav ul a {
+			border-radius: 5px;
+			display: inline-block;
+			height: 40px;
+			line-height: 40px;
+		}
+		.mainHeader nav ul a:link {
+			color: #ffffff;
+			text-decoration: none;
+			padding: 0px 25px;
+			
+		}
+		.mainHeader nav ul li a:hover {
+			background-color: #ff5533;
+			text-shadow: 2px 2px 3px red;
+			line-height: 40px;
+		}
+		.mainHeader nav ul li.active {
+			border-radius: 5px;
+			background-color: #ff5533;
+		}
+		
+		/* 메인 콘텐츠 영역 */
+		.mainContent {
+			/* border: 1px solid red; */
+			margin-top:10px;
+		}
+		.content {
+			width: 68%;
+			float: left;
+			border-radius: 5px;
+		}
+		.topcontent {
+			background-color: #ffffff;
+			border-radius: 5px;
+			padding: 3% 5%;
+			margin-bottom: 3%;
+		}
+		.bottomcontent {
+			background-color: #ffffff;
+			border-radius: 5px;
+			padding: 3% 5%;
+		}
+		
+		/* 사이드바 */
+		aside {
+			width: 24%;
+			float: left;
+			margin-left: 2%;
+			background-color: #ffffff;
+			border-radius: 5px;
+			padding: 2% 3%;
+		}
+		
+		/* 하단영역 */
+		footer.mainFooter {
+			clear: both;
+			background-color: #666666;
+			height: 40px;
+			margin: 2% 0;
+			border-radius: 5px;
+		}
+		footer p {
+			width: 80%;
+			margin: 0 auto;
+			height: 40px;
+			line-height: 40px;
+			color: #ffffff;
+		}
+		
+	</style>
+</head>
+
+<body class="body">
+
+	<header class="mainHeader">
+		<img src="./images/logo.gif">
+		
+		<nav><ul>
+			<li class="active"><a href="#">Home</a></li>
+			<li><a href="#">포트폴리오</a></li>
+			<li><a href="#">블로그</a></li>
+			<li><a href="#">연락처</a></li>
+		</ul></nav>
+	</header>
+	
+	<div class="mainContent">
+		<div class="content">
+			<article class="topcontent">	
+				<header>
+					<h2><a href="#" rel="bookmark" title="Permalink to this POST TITLE">두번째 기사</a></h2>
+				</header>
+				
+				<footer>
+					<p class="post-info">2019년 5월 16일에 포스트 되었음 ( 김철수 기자 )</p>
+				</footer>
+				
+				<content>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+					<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+				</content>
+				
+			</article>
+
+			<article class="bottomcontent">	
+				<header>
+					<h2><a href="#" rel="bookmark" title="Permalink to this POST TITLE">첫 번째 기사</a></h2>
+				</header>
+
+				<footer>
+					<p class="post-info">2018년 12월 25일에 포스트 되었음 ( 이미연 기자 )</p>
+				</footer>
+				
+				<content>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				</content>
+			
+			</article>
+		</div>
+		
+		<aside class="top-sidebar">
+			<article>
+				<h2>상단 사이드바</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+					sed do eiusmod tempor incididunt ut labore et dolore magna 
+					aliqua. </p>
+			</article>
+		</aside>
+		
+		<aside class="middle-sidebar">
+			<article>
+				<h2>중간 사이드바</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+					sed do eiusmod tempor incididunt ut labore et dolore magna 
+					aliqua. </p>
+			</article>
+		</aside>
+		
+		<aside class="bottom-sidebar">
+			<article>
+				<h2>하단 사이드바</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+					sed do eiusmod tempor incididunt ut labore et dolore magna 
+					aliqua. </p>
+			</article>
+		</aside>
+	</div>
+	
+	
+	
+	<footer class="mainFooter">
+		<p>Copyright &copy; 2020 <a href="#">웹개발 사이트</a></p>
+	</footer>
+	
+
+</body>
+
+</html>
+	

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+
+<script>
+	// SCIS = 가위 = 1로 정의
+	// ROCK = 바위 = 2로 정의
+	// PAPER = 보 = 3으로 정의
+	
+	// 컴퓨터는 랜덤값 1-3까지 발생
+	function comSRP(){
+		res = Math.floor(Math.random()*3) +1;; // 랜덤값
+		return res;
+	}
+	
+	//prompt 로 사용해서 가위,바위,보 선택(1-3)
+	function manSRP(){
+		input = prompt("가위(1)바위(2)보(3)","");
+		return input;
+	}
+	
+	function compareSRP(com, man){
+		if(man !=1 && man !=2 && man !=3){
+			document.write("1~3까지의 숫자 중에서 입력해주세요.<br>")
+			compareSRP(comSRP(),manSRP());
+		}else if(com==1){
+			if(man==1){
+				document.write("컴퓨터 : 가위("+com+")<br>나 : 가위("+man+")<br>비겼습니다.")
+			}else if(man==2){
+				document.wrtie("컴퓨터 : 가위("+com+")<br>나 : 바위("+man+")<br>이겼습니다.")
+			}else {
+				document.write("컴퓨터 : 가위("+com+")<br>나 : 보("+man+")<br>졌습니다.")
+			}
+		}else if(com==2){
+			if(man==1){
+				document.write("컴퓨터 : 바위("+com+")<br>나 : 가위("+man+")<br>졌습니다.")
+			}else if(man==2){
+				document.write("컴퓨터 : 바위("+com+")<br>나 : 바위("+man+")<br>비겼습니다.")
+			}else{
+				document.write("컴퓨터 : 바위("+com+")<br>나 : 보("+man+")<br>이겼습니다.")
+			}
+		}else {
+			if(man==1){
+				document.write("컴퓨터 : 보("+com+")<br>나 : 가위("+man+")<br>이겼습니다.")
+			}else if(man==2){
+				document.write("컴퓨터 : 보("+com+")<br>나 : 바위("+man+")<br>졌습니다.")
+			}else{
+				document.write("컴퓨터 : 보("+com+")<br>나 : 보("+man+")<br>비겼습니다.")
+			}
+		}
+	}
+	
+	compareSRP(comSRP(), manSRP());
+	
+	//텍스트로 출력
+</script>
+</body>
+</html>

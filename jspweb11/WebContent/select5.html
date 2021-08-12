@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h3>필터선택자 예제</h3>
+	<p><select>
+		<option>축구화</option>
+		<option>의류</option>
+		<option>악세서리</option>
+		<option>기타</option>
+	</select></p>
+	<p><input type="button" value="선택내용출력"></p>
+
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	$(document).ready(function(){
+		$("input:button").click(function(){
+			
+			var sel = $("select>option:selected").val();
+			
+			alert(sel);
+		});
+	});
+</script>
+</body>
+</html>

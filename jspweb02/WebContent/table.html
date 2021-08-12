@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb02 예제</title>
+</head>
+<body>
+	<h2>테이블예제</h2>
+	
+	<table border="1" width="400" bgcolor="lightgray">
+		<thead>
+		<tr bgcolor=lightyellow>
+			<th width="50">번호</th>
+			<th colspan="2">이름(팀명)</th>
+			<!--<th>팀명</th>-->
+		</tr>
+		</thead>
+		
+		<tbody>
+		<tr>
+			<th>1</th>
+			<td align="center">라일락</td>
+			<td rowspan="2">개발사업팀</td>
+		</tr>
+		<tr>
+			<th>2</th>
+			<td align="center">김학성</td>
+			<!--<td>개발팀</td>-->
+		</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+			<td colspan="3" align="right">작성자:김학성</td>
+			</tr>
+			<tr>
+			<td colspan="3" align="center">색상,정렬,길이등은 css로 주로 변경</td>
+			</tr>
+		</tfoot>
+		
+	</table>
+</body>
+</html>

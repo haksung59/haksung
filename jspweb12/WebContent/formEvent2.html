@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h3>체크박스 변경 이벤트</h3>
+	
+	<input type="checkbox" id="all">
+	<label for="all">전체</label>
+	
+	<div id="check_item">
+		<input type="checkbox" id="hobby1">
+		<label for="hobby1">테니스</label>
+		
+		<input type="checkbox" id="hobby2">
+		<label for="hobby2">노래 부르기</label>
+		
+		<input type="checkbox" id="hobby3">
+		<label for="hobb3y">여행</label>
+		
+		<input type="checkbox" id="hobby4">
+		<label for="hobby4">게임</label>
+	</div>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	$(document).ready(function(){
+		//전체를 클릭했을 때 전체다 체크 되게
+		$("#all").change(function(){
+			if(this.checked){
+				// 모든 체크박스가 체크.
+				// 1. x 업그레이드 attr -> prop
+				// attr 안되는 경우 checked , selected, disabled
+				$("#check_item").children().prop("checked",true);
+				//$("#check_item").children().attr("checked",true);
+			}else{
+				// 전체 해제
+				$("#check_item").children().prop("checked",false);
+			}
+			
+		});
+		
+		// select() --> selected 속성변경
+		
+	});
+	
+</script>
+</body>
+</html>

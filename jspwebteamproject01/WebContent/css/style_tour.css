@@ -1,0 +1,287 @@
+body {
+	margin: 0;
+	font-family: "nsk","맑은고딕","Malgun Gothic", SimHei, Sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,"FangSong", "仿宋", STFangSong, "华文仿宋","Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",AppleGothic,Dotum,arial,sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: 0px;
+	padding: 0;
+	border: 0;
+	vertical-align: top;
+}
+
+/* header 영역 */
+header {
+	width: 100%;
+	height: 100px;
+	border-bottom : 1px solid black;
+}
+#head {
+	margin: 0 auto;
+	background-color: none;
+	height: 100px;
+	width: 1000px;
+}
+
+div#logo {
+	width: 193px;
+	height: 85px;
+	float: left;
+	margin: 0;
+}
+
+div#logo img {
+	width: 193px;
+	height : 85px;
+	margin: 0;
+}
+
+nav {
+	float: left;
+	height: 85px;
+	margin: 0;
+	line-height: 75px;
+}
+
+ul.menu {
+	margin-left: 20px;
+	width: 600px;
+	list-style-type : none;
+}
+
+ul.menu>li {
+	margin: 0;
+	width: 120px;
+	height: 100%;
+	float: left;
+	background-color: none;
+}
+
+ul.menu>li a {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+ul.menu>li a:hover {
+	color: #668a0a;
+}	
+
+ul.sub {
+	background-color: none;
+	list-style-type: none;
+	width: 840px;
+	float: left;
+	height: 20px;
+	position: relative;
+	left: -120px;
+}
+#product ul.sub {
+	background-color: none;
+	list-style-type: none;
+	width: 840px;
+	float: left;
+	height: 20px;
+	position: relative;
+	left: -70px;
+}
+ul.sub>li {
+	float: left;
+	padding-right: 20px;
+	background-color: none;
+}
+div.menu_list_wrap a {
+	border-radius: 100px;
+	font-size: 10px;
+	background-color: #eee;
+	color: #9162e4;
+	margin: 0;
+	padding: 2px 5px;
+}
+a {
+	text-decoration: none;
+}
+
+/* section 영역 */
+
+section {
+	width: 850px;
+	margin: 0 auto;
+}
+h2 {
+	width: 500px;
+	float: left;
+}
+div#list {
+	margin-top: 50px;
+	text-align: right;
+	font-size: 13px;
+	padding-top: 20px;
+}
+
+div#code {
+	width: 700px;
+	float: left;
+}
+
+div#code ul {
+	list-style-type: none;
+}
+
+div#code ul>li {
+	float: left;
+	padding-right: 50px;
+	margin-left: -25px;
+}
+
+div#code ul>li a {
+	display: inline-block;
+	text-decoration: none;
+	color: gray;
+}
+
+div#code ul>li a:hover {
+	font-weight: bold;
+	color: black;
+}
+
+div#search {
+	width: 300px;
+	height: 100px;
+	float: right;
+}
+div#notice {
+	width: 100%;
+	margin-top: 130px;
+	border-top: 3px solid green;
+	border-bottom: 2px solid lightgray;
+	height: 700px;
+}
+div#notice table {
+	width: 100%;
+}
+div#notice th {
+	width: 50px;
+}
+
+div#notice th#name {
+	width: 700px;
+}
+
+div#notice th#person {
+	width: 90px;
+}
+
+thead th {
+	padding-top: 15px;
+	text-align: center;
+	padding-bottom: 15px;
+	background-color: ;
+}
+
+tbody th {
+	padding-top: 15px;
+	font-weight: normal;
+	text-align: center;
+	border-top: 1px solid #efefef;
+	font-size: 13px;
+	padding-bottom: 15px;
+}
+
+table {
+	border-spacing : 0;
+}
+
+th a {
+	text-decoration: none;
+	color: black;
+}
+
+th a:hover {
+	color: green;
+}
+
+div#menu {
+	width: 200px;
+	height: 30px;
+	margin: 30px auto 0 auto;
+	text-align: center;
+}
+
+div#menu a {
+	text-decoration: none;
+	color: black;
+	padding-left: 15px;
+	font-weight: bold;
+}
+
+div#menu a:hover {
+	color: green;
+}
+
+div#menu a#prev, div#menu a#next {
+	color: green;
+}
+
+div#menu a#1 {
+	color: navy;
+}
+
+div#write {
+	width: 100px;
+	float: right;
+	margin-bottom: 80px;
+}
+
+/* footer*/
+footer {
+	clear: both;
+	width: 100%;
+	height: 100px;
+	border-top : 2px solid #7ecb20;
+	background-color: #ccff90;
+}
+#foot {
+	width: 1000px;
+	height: 100px;
+	font-size: 10px;
+	margin: 0 auto;
+}
+#f_total {
+	width: 1000px;
+	height: 100px;
+	margin: auto;
+}
+
+span#f_logo {
+	width: 152px;
+	height: 75px;
+	float: left;
+	margin-right: 10px 30px 0 20px;
+}
+span#f_logo img{
+	width: 100%;
+	height: 100%;
+}
+#foot #f_tt {
+	height: 100px;
+	padding: 10px 0;
+	margin-left: 30px;
+	float: left;
+}
+#foot #f_menu {
+	margin-top: 5px;
+}
+#foot #f_menu a {
+	margin-right: 5px;
+	font-weight: bold;
+	color: #1b5e20;
+	text-decoration: none;
+}
+#foot p {
+	font-size: 10px;
+}
+
+

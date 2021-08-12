@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h3>사용자 함수 만들기</h3>
+<script>
+	// 일만하는 함수
+	function printImg(){
+		//이미지를 3번 가로로 출력하도록
+		document.write("<img src='images/1_plane_600x400.jpg' width='300' height='200'>")
+		document.write("<img src='images/2_plane_600x400.jpg' width='300' height='200'>")
+		document.write("<img src='images/3_plane_600x400.jpg' width='300' height='200'>")
+		document.write("<br>")
+	}
+	
+	//일을 하고 반환하는 함수
+	function getImg(){
+		//1~3번까지의 임의의 숫자를 발생해서 리턴
+		res = Math.floor(Math.random()*3) +1;
+		return res;
+	}
+	
+	// 이미지 3개를 출력하는 함수를 호출 300x200 (사이즈로 줄여서 출력)
+	printImg();
+	// 랜덤하게 1개만 이미지를 출력하는 함수 호출
+	num = getImg();
+	document.write("<img src='images/"+num+"_plane_600x400.jpg' width='150' height='100'>")
+	
+</script>
+</body>
+</html>

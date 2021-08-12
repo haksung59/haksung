@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb05_유사요소</title>
+<style type="text/css">
+	figcaption.flower1 {
+		background-image: url("images/예제2 로고.png");
+		background-repeat: no-repeat;
+		padding-left: 20px;
+	}
+	figcaption.flower2::before {
+		content: url("images/예제2 로고.png");
+	}
+</style>
+</head>
+<body>
+
+	<h2>갤러리</h2>
+		
+		<div>
+			<figure>
+				<img src="images/print-01.jpg">
+				<figcaption class="flower1">해바라기</figcaption>
+			</figure>
+		</div>
+		
+		<div>
+			<figure>
+				<img src="images/print-02.jpg">
+				<figcaption class="flower2">사계꽃</figcaption>
+			</figure>
+		</div>
+</body>
+</html>

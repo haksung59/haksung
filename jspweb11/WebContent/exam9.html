@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css">
+	.blue {
+		background-color: lightblue;
+	}
+	.yellow {
+		background-color: yellow;
+	}
+</style>
+</head>
+<body>
+	<h3>클래스명 추가하기</h3>
+
+	<p>헬로우 제이쿼리1</p>
+	<p>헬로우 제이쿼리2</p>
+	<p>헬로우 제이쿼리3</p>
+	<p>헬로우 제이쿼리4</p>
+	<p>헬로우 제이쿼리5</p>
+	
+	<div>
+		<input type="button" value="파란색" onclick="blue();"> &nbsp;
+		<input type="button" value="노란색" id="btn2">
+	</div>
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	function blue(){
+		$("p").each(function(){
+			$(this).removeClass("yellow");
+		});
+		$("p").each(function(){
+			$(this).addClass("blue");
+		});
+	}
+	$(document).ready(function(){
+		$("input#btn2").click(function(){
+			$("p").each(function(){
+				$(this).removeClass("blue");
+			});
+			$("p").each(function(){
+				$(this).addClass("yellow");
+			});
+		});
+	});
+</script>
+</body>
+</html>

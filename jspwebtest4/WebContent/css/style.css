@@ -1,0 +1,87 @@
+div.wrapper {
+	width: 550px;
+	margin: 0 auto;
+}
+div.calendar {
+	width: 100%;
+	margin-bottom: 30px;
+}
+div.header {
+	margin: 0 auto;
+	float: left;
+}
+div.header button {
+	border: none;
+}
+div.header button, div.header select {
+	height: 30px;
+}
+div.header button {
+	width: 30px;
+	color: white;
+	background-color: #aeaeae;
+	padding: 0;
+}
+div.header select {
+	width: 300px;
+}
+div.main table {
+	width: 380px;
+	float: left;
+}
+div.main table tr {
+	height: 50px;
+}
+div.main table tr td {
+	background-color: #cfff95;
+	text-align: center;
+}
+div.main table tr td.blank {
+	background-color: #ffffff;
+}
+div.main table tr td.booked {
+	background-color: #ff9e80;
+}
+aside {
+	float: right;
+	margin: -50px 30px 0 0;
+}
+aside p.aside {
+	margin-bottom: 10px;
+}
+aside p.aside b {
+	width: 30px;
+	height: 30px;
+	font-size: 30px;
+}
+aside p.aside b#available {
+	color: #cfff95;
+}
+aside p.aside #booked {
+	color: #ff9e80;
+}
+div.content {
+	float: left;
+}
+div.content h3 {
+	margin-bottom: 0;
+}
+div.content input[type=text] {
+	width: 450px;
+	height: 30px;
+	margin-top: 0;
+}
+div.content input[type="checkbox"] {
+	
+}
+div.content input[type="button"]{
+	margin-top: 10px;
+	width: 120px;
+	height: 45px;
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #707070;
+	color: #ffffff;
+	border: none;
+}
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h2>두 개의 랜덤 숫자를 발생시켜서 출력하시오.
+	<br>단, 두 숫자가 같지 않게 만드시오.
+	</h2>
+<script>
+	num1 = 0;
+	num2 = 0;
+	do{
+		num1 = parseInt((Math.random()*10))+1;
+		num2 = parseInt((Math.random()*10))+1;
+	}while(num1==num2);
+	alert(num1+","+num2)
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {
+	background-color: #654321;
+}
+div.wrapper {
+	width: 1000px;
+	margin: 0 auto;
+}
+div.imageslide {
+	position: relative; /* 안에있는 자식 태그가 absolute로 조정하기 위해*/
+}
+a.prev, a.next{
+	position: absolute;
+	top: 190px;
+	padding: 20px;
+	color: #111111;
+	background-color: #efefef;
+	margin-top: -20px;
+	border-radius: 0 3px 3px 0;
+}
+a.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+a.prev:hover, a.next:hover {
+	background-color: gray;
+	color: #ffffff;
+}
+span {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: lightgray;
+}
+div.control{
+	text-align:center;
+}
+footer {
+	height: 50px;
+	background-color: lightgray;
+}
+address {
+	height: 100%;
+	font-size: 120%;
+	line-height: 50px;
+	padding-left: 20px;
+	color: blue;
+}
