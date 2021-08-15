@@ -2,7 +2,7 @@ package aaa.practiceJava;
 
 import aaa.vo.TestVo;
 
-public class operator {
+public class Operator {
 
 	public static void main(String[] args) {
 		
