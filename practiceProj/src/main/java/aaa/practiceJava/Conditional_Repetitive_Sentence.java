@@ -84,9 +84,9 @@ public class Conditional_Repetitive_Sentence {
 		
 		
 		int result = 1;
-
+		boolean end = false;
 		System.out.println("계산식을 입력하시오. (끝내기 : 0)");
-		while(result!=0) {
+		while(result!=0 || end==false) {
 			Scanner sc = new Scanner(System.in);
 			String input = sc.next();
 			input.replace(" ", "");
@@ -133,6 +133,7 @@ public class Conditional_Repetitive_Sentence {
 				System.out.println("계산 결과 : "+ result);
 				System.out.println("계산기를 종료합니다.");
 				result = 0;
+				end = true;
 			}else {
 				System.out.print(" = "+result);
 			}
@@ -143,6 +144,45 @@ public class Conditional_Repetitive_Sentence {
 		for(int tmp : arr) {
 			System.out.println(tmp);
 		}
+		
+		//do-while
+		int input = 0, answer = 0;
+		answer = (int)(Math.random()*100)+1;
+		Scanner sc = new Scanner(System.in);
+		
+		do {
+			System.out.print("1과 100 사이의 정수를 입력하시오 : ");
+			input = sc.nextInt();
+			
+			if(input > answer) {
+				System.out.println("down");
+			}else if(input < answer) {
+				System.out.println("up");
+			}
+			
+		}while(input!=answer);
+		
+		System.out.println("입력한 정수 : " + input + "정답!");
+		
+		//반복문 continue
+		for(int i=0; i<10; i++) {
+			if(i%3==0) {
+				continue;
+			}
+			System.out.println(i);
+		}
+		
+		//이름 붙은 반복문
+		Loop1 : for(int i=2; i<=9; i++) {
+			for(int j=1; j<=9; j++) {
+				if(j==5)
+					continue Loop1;
+				System.out.println(i+"*"+j+"="+i*j);
+			}	// end of for i
+			System.out.println();
+		}
+		
+		
 		
 	}
 
