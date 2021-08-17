@@ -3,8 +3,6 @@ package aaa.practiceJava;
 import java.util.Date;
 import java.util.Scanner;
 
-import ch.qos.logback.core.recovery.ResilientSyslogOutputStream;
-
 public class Conditional_Repetitive_Sentence {
 
 	public static void main(String[] args) {

@@ -1,5 +1,7 @@
 package aaa.practiceJava;
 
+import java.util.Scanner;
+
 public class Array {
 
 	public static void main(String[] args) {
@@ -69,7 +71,7 @@ public class Array {
 		for(int i=0; i<sort.length; i++) {
 			System.out.print(sort[i] + " ");
 		}
-		
+		System.out.println();
 		System.out.println("---------counter---------");
 		
 		//counter
@@ -100,7 +102,55 @@ public class Array {
 		System.out.println(words.substring(5) + " // substring(5)");
 		System.out.println(words.substring(5, 7) + " // substring(5,7) : index 5(포함)부터 7(미포함)까지");
 		char[] chwords = words.toCharArray();
-		System.out.println(chwords[5]);
+		System.out.println(chwords[5] + "-- chwords[5]");
+		
+		//2차원 배열 빙고
+		System.out.println("nxn빙고, n값을 입력하시오.");
+		Scanner sc = new Scanner(System.in);
+		final int size = sc.nextInt();
+		int x = 0, y = 0, input = 0;
+		int [][] bingo = new int[size][size];
+		for(int i=0; i<size; i++) {
+			for(int j=0; j<size; j++) {
+				bingo[i][j] = i*size + j + 1;
+			}
+		}
+		
+		//섞기
+		for(int i=0; i<size; i++) {
+			for(int j=0; j<size; j++) {
+				x=(int)(Math.random()*size);
+				y=(int)(Math.random()*size);
+				
+				int temp = bingo[i][j];
+				bingo[i][j] = bingo[x][y];
+				bingo[x][y] = temp;
+			}
+		}
+		
+		do {
+			for(int i=0; i<size; i++) {
+				for(int j=0; j<size; j++) {
+					System.out.printf("%2d ", bingo[i][j]);
+				}
+				System.out.println();
+			}
+			System.out.println();
+			
+			System.out.printf("1~%d의 숫자를 입력하세요. (종료:0) -", size*size);
+			input = sc.nextInt();
+			
+			//번호 지우기(0으로)
+			outer :
+				for(int i=0; i<size; i++) {
+					for(int j=0; j<size; j++) {
+						if(bingo[i][j]==input) {
+							bingo[i][j] = 0;
+							break outer;
+						}
+					}
+				}
+		}while(input!=0);
 		
 		
 		
