@@ -9,6 +9,10 @@ class Point_OverRide {
 		this.y = y;
 	}
 	
+	int getplus(){
+		return x+y;
+	}
+	
 	public String toString() {
 		return "x:"+x+"y:"+y;
 	}
@@ -18,9 +22,15 @@ class Point3D extends Point_OverRide {
 	
 	int z;
 	
-	public Point3D(int x, int y, int z) {
+	Point3D(int x, int y, int z) {
 		super(x, y);
 		this.z = z;
+	}
+
+	@Override
+	int getplus() {
+		// TODO Auto-generated method stub
+		return x+y+z;
 	}
 
 	@Override
@@ -38,9 +48,11 @@ public class OverRiding {
 		
 		Point_OverRide po = new Point_OverRide(1,2);
 		System.out.println(po);
+		System.out.println(po.getplus());
 		
 		Point3D p = new Point3D(3,4,5);
 		System.out.println(p);
+		System.out.println(p.getplus());
 
 	}
 
