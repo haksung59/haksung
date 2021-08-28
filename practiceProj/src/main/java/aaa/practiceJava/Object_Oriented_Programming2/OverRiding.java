@@ -1,6 +1,6 @@
 package aaa.practiceJava.Object_Oriented_Programming2;
 
-class Point_OverRide {
+class Point_OverRide{
 	int x;
 	int y;
 	
@@ -15,7 +15,8 @@ class Point_OverRide {
 	
 	public String toString() {
 		return "x:"+x+"y:"+y;
-	}
+	}	
+	
 }
 
 class Point3D extends Point_OverRide {
@@ -42,7 +43,7 @@ class Point3D extends Point_OverRide {
 	
 }
 
-public class OverRiding {
+public class OverRiding extends Thread{
 
 	public static void main(String[] args) {
 		
@@ -54,6 +55,21 @@ public class OverRiding {
 		System.out.println(p);
 		System.out.println(p.getplus());
 
+	}
+
+	@Override
+	public void run() {
+		System.out.println("hi");
+		for(int i=0; i<10; i++) {
+			
+			try {
+				Thread.sleep(1000+(int)Math.random()*1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
 	}
 
 }

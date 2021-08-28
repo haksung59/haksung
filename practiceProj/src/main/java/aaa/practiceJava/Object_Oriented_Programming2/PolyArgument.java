@@ -1,6 +1,7 @@
 package aaa.practiceJava.Object_Oriented_Programming2;
 
 import java.util.Scanner;
+import java.util.Vector;
 
 import ch.qos.logback.core.recovery.ResilientSyslogOutputStream;
 
@@ -53,7 +54,7 @@ class Audio extends Product {
 class Buyer {
 	int money;
 	int bonusPoint = 0;
-	Product[] item = new Product[10];
+	Vector item = new Vector();
 	int i=0;
 	
 	Buyer(int money){
@@ -69,7 +70,7 @@ class Buyer {
 		money -= p.price;
 		bonusPoint += p.bonusPoint;
 		
-		item[i++] = p;
+		item.add(p);
 		System.out.println(p + "을/를 구매하셨습니다.");
 		
 	}
@@ -78,10 +79,10 @@ class Buyer {
 		int sum = 0;
 		String itemList = "";
 		
-		for(int i=0; i<item.length; i++) {
-			if(item[i]==null) break;
-			sum += item[i].price;
-			itemList += item[i] + ", ";
+		for(int i=0; i<item.size(); i++) {
+			Product p = (Product)item.get(i);
+			sum += p.price;
+			itemList += (i==0) ? p : ", " + p;
 		}
 		
 		System.out.println("총 구매금액 : " + sum);
@@ -91,6 +92,15 @@ class Buyer {
 		
 	}
 	
+	void refund(Product p) {
+		if(item.remove(p)) {
+			money += p.price;
+			bonusPoint -= p.bonusPoint;
+			System.out.println(p + "을/를 반품하셨습니다.");
+		}else {
+			System.out.println("해당 제품이 없습니다.");
+		}
+	}
 	
 }
 
@@ -102,23 +112,36 @@ public class PolyArgument {
 		Scanner sc = new Scanner(System.in);
 		int money = sc.nextInt();
 		Buyer b = new Buyer(money);
+		Tv tv = new Tv();
+		Computer com = new Computer();
+		Audio audio = new Audio();
 		
 		boolean stop = true;
 		
 		while(stop) {
 			
-			System.out.println("구매하실 제품은?(1.Tv(100) 2.Computer(200) 3.Audio(50) 0.종료");
+			System.out.println("구매하실 제품은?(1.Tv(100) 2.Computer(200) 3.Audio(50) 4.환불하기 0.종료");
 			sc = new Scanner(System.in);
 			int buy = sc.nextInt();
 			
 			if(buy == 1) {
-				b.buy(new Tv());
+				b.buy(tv);
 			}else if(buy ==2) {
-				b.buy(new Computer());
+				b.buy(com);
 			}else if(buy ==3) {
-				b.buy(new Audio());
+				b.buy(audio);
 			}else if(buy ==0) {
 				stop = false;
+			}else if(buy == 4) {
+				System.out.println("환불하실 제품은? (1.Tv 2.Computer 3.Audio 4.환불 안함 0.종료)");
+				buy = sc.nextInt();
+				switch(buy) {
+				case 1: b.refund(tv); break;
+				case 2: b.refund(com); break;
+				case 3: b.refund(audio); break;
+				case 4: System.out.println("환불 하지 않습니다."); break;
+				case 0: stop = true;
+				}
 			}
 			
 			b.summary();
