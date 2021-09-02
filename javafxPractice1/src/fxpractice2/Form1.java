@@ -61,7 +61,6 @@ public class Form1 extends Application{
 		
 		List showList = new ArrayList<>();
 		showList.add(new TextField[] {grade, cclass, no, name, score});
-		
 		read.setOnAction(e -> {
 			try {
 				
@@ -70,9 +69,6 @@ public class Form1 extends Application{
 				
 				String[] outputstr = new String[5];
 				TextField[] tf = {null, null, null, null, null};
-				for(int i=1; i<rsize; i++) {
-					
-				}
 				
 				for(int i=0; i<=rsize; i++) {
 					if(i==0) {
@@ -86,19 +82,20 @@ public class Form1 extends Application{
 						tf[3] = new TextField();
 						tf[4] = new TextField();
 						gp.addColumn(0, tf[0]); gp.addColumn(1, tf[1]); gp.addColumn(2, tf[2]); gp.addColumn(3, tf[3]); gp.addColumn(4, tf[4]);
+						showList.add(tf);
 					}else {
 						
 						outputstr = (String[])readList.get(i);
-						tf[0] = new TextField(outputstr[0]);
-						tf[1] = new TextField(outputstr[1]);
-						tf[2] = new TextField(outputstr[2]);
-						tf[3] = new TextField(outputstr[3]);
-						tf[4] = new TextField(outputstr[4]);
+						tf[0] = new TextField(); tf[0].setText(outputstr[0]);
+						tf[1] = new TextField(); tf[1].setText(outputstr[1]);
+						tf[2] = new TextField(); tf[2].setText(outputstr[2]);
+						tf[3] = new TextField(); tf[3].setText(outputstr[3]);
+						tf[4] = new TextField(); tf[4].setText(outputstr[4]);
 						
-						readList.set(i, new TextField[] {tf[0], tf[1], tf[2], tf[3], tf[4]});
 						gp.addColumn(0, tf[0]); gp.addColumn(1, tf[1]); gp.addColumn(2, tf[2]); gp.addColumn(3, tf[3]); gp.addColumn(4, tf[4]);
-						showList.add(readList.get(i-1));
+						showList.add(tf);
 					}
+					
 				}
 				
 			} catch (Exception e1) {
@@ -114,7 +111,14 @@ public class Form1 extends Application{
 				e1.printStackTrace();
 			}
 		});
-		update.setOnAction(null);
+		update.setOnAction(e -> {
+			try {
+				updateUser(gp, showList);
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+		});
 		remove.setOnAction(null);
 		
 		apleft.getChildren().addAll(gp);
@@ -139,7 +143,7 @@ public class Form1 extends Application{
 		int cnt = 0;
 		if(rs.next()) cnt = rs.getInt(1);
 		
-		int grade = 0;
+		String grade = "";
 		String cclass = "";
 		String no = "";
 		String name = "";
@@ -147,7 +151,7 @@ public class Form1 extends Application{
 		
 		if(rowcount==2) {
 			TextField[] tf = (TextField[])showList.get(0);
-			grade = Integer.parseInt(tf[0].getText());
+			grade = tf[0].getText();
 			cclass = tf[1].getText();
 			no = tf[2].getText();
 			name = tf[3].getText();
@@ -162,9 +166,86 @@ public class Form1 extends Application{
 		}else if(rowcount-cnt==2) {
 			TextField[] tf = (TextField[])showList.get(rowcount-2);
 			
-			for(int i=0; i<showList.size(); i++) {
-				System.out.println(((TextField[])showList.get(i))[0].getText());
+			grade = tf[0].getText();
+			cclass = tf[1].getText();
+			no = tf[2].getText();
+			name = tf[3].getText();
+			score = tf[4].getText();
+			
+			String sql = "insert into user values (" + grade + "," + cclass + "," + no + ",'" + name + "','"+score +"')";
+			pstmt = conn.prepareStatement(sql);
+			
+			int result = 0;
+			result = pstmt.executeUpdate(sql);
+			if(result>0) {
+				System.out.println("success create");
+				
+				for(int i=0; i<tf.length; i++) {
+					tf[i] = new TextField();
+				}
+				showList.add(tf);
+				gp.addColumn(0, tf[0]); gp.addColumn(1, tf[1]); gp.addColumn(2, tf[2]); gp.addColumn(3, tf[3]); gp.addColumn(4, tf[4]);
 			}
+		}
+		
+	}
+	
+	private void updateUser(GridPane gp,List showList) throws Exception {
+		initializeDB();
+		System.out.println("0 : " + ((TextField[])showList.get(0))[3].getText());
+		System.out.println("1 : " + ((TextField[])showList.get(1))[3].getText());
+		System.out.println(gp.getChildren().contains(showList));
+		List dbList = new ArrayList<>();
+		
+		String query = "select * from user";
+		ResultSet rs = stmt.executeQuery(query);
+		
+		while(rs.next()) {
+			
+			String grade = rs.getString(1);
+			String cclass = rs.getString(2);
+			String no = rs.getString(3);
+			String name = rs.getString(4);
+			String score = rs.getString(5);
+			
+			String[] resultArr = {grade, cclass, no, name, score};
+			
+			dbList.add(resultArr);
+			
+		}
+		
+		int rowcount = gp.getRowCount();
+		
+		TextField[]tf = new TextField[5];
+		String[] dbstr = new String[5];
+		int[] changeindex = null;
+		System.out.println(showList.get(1));
+		String sql = "";
+		
+		if(rowcount>2) {
+//			for(int i=0; i<rowcount-2; i++) {
+//				System.out.println(showList.size() + "i = " + i);
+//				tf = (TextField[])showList.get(i);
+//				dbstr = (String[])dbList.get(i);
+//				
+//				for(int j=0; j<5; j++) {
+//					if(!tf[j].getText().equals(dbstr[j])) {
+//						changeindex[changeindex.length] = j;
+//						System.out.println(changeindex[0]);
+//					}
+//				}
+//			}
+//			
+//			String[] updateColumn = {"grade", "cclass", "no", "name", "score"};
+//			switch(changeindex.length) {
+//			case 1 : sql = "update user set " + updateColumn[changeindex[0]] + " = " + tf[changeindex[0]].getText() + " where no = " + dbstr[2];
+//			}
+//			
+//			pstmt = conn.prepareStatement(sql);
+//			
+//			int result = 0;
+//			result = pstmt.executeUpdate(sql);
+//			if(result>0) System.out.println("success update");
 			
 		}
 		
