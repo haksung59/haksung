@@ -1,0 +1,20 @@
+package kr.re.kitri.ch02_observable;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.observables.ConnectableObservable;
+
+public class Ch2_14_hot_observable {
+    public static void main(String[] args) {
+        ConnectableObservable<String> source =
+                Observable.just("Alpha", "Beta", "Gamma", "Delta", "Epsilon")
+                        .publish();
+
+        //Set up observer 1
+        source.subscribe(s -> System.out.println("Observer 1: " + s));
+        //Set up observer 2
+        source.map(String::length)
+                .subscribe(i -> System.out.println("Observer 2: " + i));
+        //Fire!
+        source.connect();
+    }
+}

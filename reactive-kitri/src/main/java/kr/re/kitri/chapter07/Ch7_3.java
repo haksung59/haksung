@@ -1,0 +1,11 @@
+package kr.re.kitri.chapter07;
+
+import io.reactivex.rxjava3.core.Observable;
+
+public class Ch7_3 {
+    public static void main(String[] args) {
+        Observable.range(1, 10)
+                .buffer(3, 1)
+                .subscribe(System.out::println);
+    }
+}

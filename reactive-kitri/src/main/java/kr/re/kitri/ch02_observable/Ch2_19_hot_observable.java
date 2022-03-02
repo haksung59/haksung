@@ -1,0 +1,30 @@
+package kr.re.kitri.ch02_observable;
+
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.observables.ConnectableObservable;
+
+import java.util.concurrent.TimeUnit;
+
+public class Ch2_19_hot_observable {
+    public static void main(String[] args) {
+        ConnectableObservable<Long> seconds =
+                Observable.interval(1, TimeUnit.SECONDS).publish();
+        //observer 1
+        seconds.subscribe(l -> System.out.println("Observer 1: " + l));
+        seconds.connect();
+        //sleep 5 seconds
+        sleep(5000);
+        //observer 2
+        seconds.subscribe(l -> System.out.println("Observer 2: " + l));
+        //sleep 5 seconds
+        sleep(5000);
+    }
+
+    public static void sleep(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
