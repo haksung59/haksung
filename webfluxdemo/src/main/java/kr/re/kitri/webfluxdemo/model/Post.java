@@ -1,13 +1,17 @@
 package kr.re.kitri.webfluxdemo.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Table("posts")
 public class Post {
     private int userId;
+    @Id
     private int id;
-    private  String title;
+    private String title;
     private String body;
 
     public Post() {}
-
     public Post(int userId, int id, String title, String body) {
         this.userId = userId;
         this.id = id;
