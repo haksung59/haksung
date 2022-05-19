@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb02 예제</title>
+</head>
+<body>
+
+	<h2>form태그안에 들어가는 폼컨트롤 종류</h2>
+	
+	<h3>무인 주문 화면</h3>
+
+	<form action="jsp/form4pro.jsp"
+		  method="GET">
+		  
+		  <fieldset>
+		  <legend>회원정보</legend>
+		  	<p>	<!-- 둘 중 하나만 선택할 수 있게 하려면 name이 같아야 함 -->
+		  	<input type="radio" name="member" value="1">회원 &nbsp;&nbsp;
+		  	<input type="radio" name="member" value="0"
+		  		   checked="checked">비회원
+		  	</p>
+		  	</fieldset>
+		  	<br>
+		  	
+		  	<fieldset>
+		  	<legend>주문정보</legend>
+		  	<p>주문메뉴를 선택하시오: <br>
+		  	<input type="checkbox" name="food">돈까스<br>
+		  	<input type="checkbox" name="food">돌솥비빔밥<br>
+		  	<input type="checkbox" name="food">떡볶이<br>
+		  	<input type="checkbox" name="food">라면<br>
+		  	<input type="checkbox" name="food">알밥<br>
+		  	</p>
+		  	
+		  	<p>사이드메뉴를 선택하시오: <br>
+		  	<input type="checkbox" name="dessert">아메리카노<br>
+		  	<input type="checkbox" name="dessert">오렌지쥬스<br>
+		  	<input type="checkbox" name="dessert">콜라<br>
+		  	<input type="checkbox" name="dessert">사이다<br>
+		  	<input type="checkbox" name="dessert">환타<br>
+		  	</p>
+		  	</fieldset>
+		  	
+		  	<p>
+		  	<input type="button" value="주문하기"> &nbsp;
+		  	<input type="button" value="취소하기"> &nbsp;
+	</form>
+</body>
+</html>

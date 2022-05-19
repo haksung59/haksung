@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h2>javascript & jquery 비교</h2>
+	<h3>1.스타일속성</h3>
+	<p id="js">자바스크립트로 수정합니다.</p>
+	<p id="jq">제이쿼리로 수정합니다.</p>
+	
+	<h3>2.폼컨트롤속성</h3>
+	<p><input id="jsv" type="text" value=""></p>
+	<p><input id="jqv" type="password" value=""></p>
+	
+	<h3>3.속성을 변경</h3>
+	<p><img src="images/bird.gif" id="jsi" width="200"></p>
+	<p><img src="images/bear.gif" id="jqi" width="200"></p>
+	
+	<h3>4.폼컨트롤-특별케이스</h3>
+	<p><select id="jss">
+		<option>돈까스</option>
+		<option selected="selected">스파게티</option>
+		<option>볶음밥</option>
+		<option>기타</option>
+		</select>&nbsp;<input type="button" class="menu" value="메뉴선택"
+								onclick="selectMenu()">
+	</p>
+	
+	<p><select id="jqs">
+		<option>축구화</option>
+		<option selected="selected">의류</option>
+		<option>악세서리</option>
+		<option>기타</option>
+		</select>&nbsp;<input type="button" class="cloth" value="의류선택">
+	</p>
+	
+	<h3>5.태그안에 html문장을 넣기</h3>
+	
+	<p id="jshtml">자바스크립트</p>
+	<p id="jqhtml">제이쿼리</p>
+	
+
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	document.getElementById("js").style.color="green";
+	$("#jq").css("color","blue");
+	
+	//2. 폼컨트롤 속성 변경에 대한 비교
+	document.getElementById("jsv").value="아이디";
+	$("#jqv").val("1234");
+	
+	document.getElementById("jsi").src = "images/bear.gif";
+	$("#jqi").attr("src", "images/bird.gif");
+	
+	//4. 폼케이스-특별케이스
+	$(document).ready(function(){
+		$("input.cloth").click(function(){
+			
+			var sel = $("select#jqs>option:selected").val();
+			
+			alert(sel);
+		});
+	});
+	function selectMenu(){
+		var selbox = document.getElementById("jss");
+		//option 배열로 여러개 존재.
+		for(i=0; i<selbox.options.length; i++){
+			if(selbox.options[i].selected == true){
+				val = selbox.options[i].value;
+				alert(val);
+			}
+		}
+	}
+	
+	//5. 태그안에 html 넣기
+	document.getElementById("jshtml").innerHTML = "<b><i>자바스크립트</i></b>"
+	
+	$("#jqhtml").html("<a href='https://www.jquery.com'>제이쿼리</a>");
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+
+	<h3>태그를 추가하기 & 삭제하기</h3>
+	
+	<p>텍스트나 태그를 추가</p>
+	
+	<div>
+		<button id="back">컨텐츠뒤에 추가</button>
+		<button id="front">컨텐츠앞에 추가</button>
+		<button id="empty">컨텐츠를 제거</button>
+	</div>
+	
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	$(document).ready(function(){
+		$("button#back").click(function(){
+			$("p").append("★");	//뒤에 컨텐츠를 추가
+		});
+		$("button#front").click(function(){
+			$("p").prepend("★");
+		});
+		$("button#empty").click(function(){
+			$("p").empty();		//안에 내용 비움.
+			
+			// 기본내용은 넣고 싶다.
+			$("p").append("텍스트나 태그를 추가");
+		})
+	});
+</script>
+</body>
+</html>

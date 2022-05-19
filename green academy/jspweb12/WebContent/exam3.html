@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+
+	<h3>폼입력을 출력하는 예제</h3>
+	
+	<p>글자를 입력하고 엔터 or 클릭하시오.</p>
+	<p>기본 이벤트를 막아줘야 함.</p>
+	<form action="exam2.html" method="GET">
+	<p><input type="text" value="">
+		<input type="submit" value="클릭하면 입력글자 출력">
+	</p>
+	</form>
+	<p id="result">당신이 타이핑입력한 내용 : <span id="text"></span></p>
+
+
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	$(document).ready(function(){
+		$("input[type='submit']").click(function(event){
+			var text = $("input:text").val();
+			$("#text").text(text);
+			event.preventDefault();
+		});
+	});
+	
+</script>
+</body>
+</html>

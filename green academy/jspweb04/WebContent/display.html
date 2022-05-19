@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb04_display</title>
+<style type="text/css">
+	div.header {
+		width: 600px;
+		margin: 0 auto;
+	}
+	div.logo {
+		background-color: lightgray;
+		text-align: center;
+	}
+	ul {
+		background-color: lightskyblue;
+	}
+	ul>li {
+		display: inline-block;	/* inline : 여백속성 읽어버림 */
+								/* inline-block 여백 가능 */
+		width: 120px;
+	}
+	ul>li.list2,ul>li.list4 {
+		display: none;			/* 제거X 숨기기O */
+	}
+	ul>li.list1 {
+		visibility: hidden;		/* 위치유지 숨기기 */
+	}
+</style>
+</head>
+<body>
+	<h2>블록요소를 인라인요소로 변경</h2>
+	<div class="header">
+		<div class="logo">
+			<img src="images/display image.png" alt="logo">
+		</div>
+		<ul>
+			<li class="list1">HOME</li>
+			<li class="list2">컴퓨터</li>
+			<li>네트워크</li>
+			<li class="list4">무선통신</li>
+		</ul>
+	</div>
+
+</body>
+</html>

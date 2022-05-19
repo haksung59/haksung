@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h2>on 이벤트 예제</h2>
+	
+	<div id="wrap">
+		<h3>타이틀제목-1</h3>
+	</div>
+
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	$(document).ready(function(){
+		// bind(이벤트명, 함수)
+		$("body").bind("click","h3",function(){
+			
+			var length = $("h3").length;
+			var curHtml = $(this).html();
+			
+			$("#wrap").append("<h3>" + curHtml +","+ length + "</h3>");
+			
+		});
+			
+	});
+</script>
+</body>
+</html>

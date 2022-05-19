@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb02 예제</title>
+</head>
+<body>
+
+	<h2>form태그안에 들어가는 폼컨트롤 종류</h2>
+	
+	<form action="jsp/form3pro.jsp"
+		  method="GET">
+
+	<h3>글쓰기</h3>
+	
+	<p>
+	제목: <input type="text" name="subject"
+				size="50" placeholder="제목을 입력하시오">
+	</p>
+	
+	<p>
+	<textarea name="content" cols="45"
+			  rows="10">
+	</textarea>
+	
+	<p>
+	첨부파일:<input type="file" name="attach">
+	<!-- 파일전송은 form태그에서 method="POST"만 가능 -->
+	</p>
+	
+	<p>
+	<input type="button" value="글 등록">
+	</p>
+
+	</form>
+	
+</body>
+</html>

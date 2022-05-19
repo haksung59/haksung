@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h2>자바스크립트 샘플6</h2>
+	<p id="demo">버튼을 클릭하면 글자가 사라집니다.</p>
+	<p><input type="button" value="사라져라 얍!" onclick="jhide();">
+	&nbsp;<input type="button" value="나타나라 얍!" onclick="jshow();">
+<script>
+	var state = 1; //글자가 보일 때
+	function jhide(){
+		if(state==1){
+			document.getElementById("demo").style.display="none";
+			state=0;
+		}else{
+			document.getElementById("demo").style.display="block";
+			state=1;
+		}
+	}
+</script>
+</body>
+</html>

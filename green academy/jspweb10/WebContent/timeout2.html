@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+	<h3>알람버튼(5초후에 alert 점심시간입니다.),<br>
+	정지버튼(alert 알람을 멈춥니다.) 만드시오</h3>
+	
+	<p><input type="button" value="시작버튼" onclick="start();"></p>
+	<p><input type="button" value="정지버튼" onclick="stop();"></p>
+<script>
+	var id_1;
+	function start(){
+		alert("sdfla");
+		id_1 = setTimeout("alarm()",5000);
+	}
+	function alarm(){
+		alert("점심시간입니다");
+	}
+	
+	function stop(){
+		clearTimeout(id_1);
+		alert("ss");
+	}
+	
+</script>
+</body>
+</html>

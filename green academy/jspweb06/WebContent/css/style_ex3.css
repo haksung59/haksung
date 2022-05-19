@@ -1,0 +1,66 @@
+body{
+	background-color: #eaefa3;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 12px;	/*전체 폰트를 줄여서 시작 (기본 16px)*/
+}
+div.wrapper {
+	background-color: #fafeab;
+	width: 960px;
+	margin: 0 auto;
+	border: 1px solid red;
+}
+#logo {
+	text-align: center;
+}
+ul.menu {
+	list-style-type: none;
+	margin: 5px;
+	padding: 5px 5px 5px 190px;
+}
+ul.menu li {
+	float: left;
+	border-right: 1px solid black;
+	padding: 12px 10px;
+}
+ul.menu li a {
+	text-decoration: none;
+	margin: 0px 6px;
+	color: white;
+	font-size: 18px;
+}
+#nav {
+	background-color: #c0c0c0;
+	height: 60px;
+	margin: 10px;
+}
+
+ul.menu li a:hover, ul.menu li a.on {
+	color: #ff8000;
+}
+
+#우동 {
+	width: 400px;
+	height: 250px;
+	margin: 50px 0px 0px 150px;
+}
+div.main {
+	padding: 10px;
+}
+div.footer {
+	text-align: center;
+	text-style: bold;
+	padding: 15px;
+	background-color: #000000;
+	color: white;
+	font-size: 16px;
+}
+h3 {
+	font-size: 22px;
+	
+}
+p {
+	text-size: 17px;
+	margin-left: 150px;
+	text-style-type: bold;
+}
+

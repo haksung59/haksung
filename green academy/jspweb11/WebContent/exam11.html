@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css">
+	div {
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		line-height: 200px;
+		background-color: blue;
+	}
+	.blue{
+		background-color: blue;
+	}
+	.green{
+		background-color: green;
+	}
+</style>
+</head>
+<body>
+	<h3>상자안에 버튼 클릭</h3>
+	<div>
+	<button>초록색으로</button>
+	</div>
+
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	$(document).ready(function(){)
+		$("button").click(function(){
+			//버튼을 누르면 배경색 초록색 변경.
+			//텍스트 초록색으로-> 파란색으로 변경.
+			$("div").addClass("green");
+		});
+	});
+</script>
+</body>
+</html>

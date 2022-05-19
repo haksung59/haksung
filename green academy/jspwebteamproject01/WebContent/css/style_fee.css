@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Cute+Font&family=Dokdo&family=East+Sea+Dokdo&family=Gaegu&display=swap');
+/* font-family: 'Dokdo', cursive; */
+body {
+	margin: 0;
+	font-family: "nsk","맑은고딕","Malgun Gothic", SimHei, Sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,"FangSong", "仿宋", STFangSong, "华文仿宋","Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",AppleGothic,Dotum,arial,sans-serif;
+	font-size: 15px;
+	font-weight: 300;
+	letter-spacing: 0px;
+	padding: 0;
+	border: 0;
+	vertical-align: top;
+}
+
+
+/* header 영역 */
+header {
+	width: 100%;
+	height: 100px;
+	border-bottom : 1px solid black;
+}
+#head {
+	margin: 0 auto;
+	background-color: none;
+	height: 100px;
+	width: 1000px;
+}
+
+div#logo {
+	width: 193px;
+	height: 85px;
+	float: left;
+	margin: 0;
+}
+
+div#logo img {
+	width: 193px;
+	height : 85px;
+	margin: 0;
+}
+
+nav {
+	float: left;
+	height: 85px;
+	margin: 0;
+	line-height: 75px;
+}
+
+ul.menu {
+	margin-left: 20px;
+	width: 600px;
+	list-style-type : none;
+}
+
+ul.menu>li {
+	margin: 0;
+	width: 120px;
+	height: 100%;
+	float: left;
+	background-color: none;
+}
+
+ul.menu>li a {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+ul.menu>li a:hover {
+	color: #668a0a;
+}	
+
+ul.sub {
+	background-color: none;
+	list-style-type: none;
+	width: 840px;
+	float: left;
+	height: 20px;
+	position: relative;
+	left: -120px;
+}
+#product ul.sub {
+	background-color: none;
+	list-style-type: none;
+	width: 840px;
+	float: left;
+	height: 20px;
+	position: relative;
+	left: -70px;
+}
+ul.sub>li {
+	float: left;
+	padding-right: 20px;
+	background-color: none;
+}
+div.menu_list_wrap a {
+	border-radius: 100px;
+	font-size: 10px;
+	background-color: #eee;
+	color: #9162e4;
+	margin: 0;
+	padding: 2px 5px;
+}
+a {
+	text-decoration: none;
+}
+
+/* section */
+section {
+	margin: 50px auto 100px auto;
+	width: 330px;
+}
+h2#subject {
+	width: 150px;
+	float: left;
+}
+div#list {
+	margin-top: 50px;
+	text-align: right;
+	font-size: 13px;
+	padding-top: 20px;
+	margin-bottom: 50px;
+}
+.section_table {
+	border: 1px solid #bbb5c3;
+	border-spacing: 0 0;
+	margin: 0 auto;
+}
+.tittle th{
+	background-color: #e1f5fe;
+	border: 1px solid #bbb5c3;
+	border-spacing: 0;
+	font-weight: bold;
+}
+.section_table th {
+	color: #af4448;
+}
+.section_table td {
+	color: black;
+}
+.section_table tr td {
+	background-color: #e8eaf6;
+	border: 1px solid #bbb5c3;
+}
+.name {
+	width: 230px;
+	height: 30px;
+}
+.fee {
+	width: 100px;
+	text-align: center;
+}
+
+/* footer*/
+footer {
+	width: 100%;
+	height: 100px;
+	border-top : 2px solid #7ecb20;
+	background-color: #ccff90;
+}
+#foot {
+	width: 1000px;
+	height: 100px;
+	font-size: 10px;
+	margin: 0 auto;
+}
+#f_total {
+	width: 1000px;
+	height: 100px;
+	margin: auto;
+}
+
+span#f_logo {
+	width: 152px;
+	height: 75px;
+	float: left;
+	margin-right: 10px 30px 0 20px;
+}
+span#f_logo img{
+	width: 100%;
+	height: 100%;
+}
+#foot #f_tt {
+	height: 100px;
+	padding: 10px 0;
+	margin-left: 30px;
+	float: left;
+}
+#foot #f_menu {
+	margin-top: 5px;
+}
+#foot #f_menu a {
+	margin-right: 5px;
+	font-weight: bold;
+	color: #1b5e20;
+	text-decoration: none;
+}
+#foot p {
+	font-size: 10px;
+}
+
+

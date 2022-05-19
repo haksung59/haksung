@@ -1,0 +1,72 @@
+body {
+	width: 960px;
+}
+div.wt {
+	width: 700px;
+	margin: 0;
+}
+#weather {
+	width: 700px;
+	height: 150px;
+	margin: 0 130px;
+}
+#month {
+	width: 700px;
+	display: inline;
+	margin: 0 130px;
+	font-size: 150%;
+}
+#YM {
+	color: #c8beb3;
+}
+#month p {
+	margin: 0 130px;
+	text-align: center;
+}
+#right,#left {
+	font-size: 130%;
+	background-color:white;
+	border: none;
+	margin: 0;
+}
+#left {
+	float: left;
+}
+#right {
+	float: right;
+}
+div.wrap1 {
+	margin: 0 128px;
+	border: 1px solid #c8beb3;
+}
+div.wrap2 {
+	margin: 0 128px;
+}
+#calendar1, #calendar2 {
+	border-collapse: collapse;
+}
+#calendar1 td {
+	width: 100px;
+	font-size: 75%;
+	text-align: center;
+	margin: 0px;
+	height: 22px;
+	line-height: 22px;
+	color: #c8beb3;
+	font-weight: bold;
+}
+#calendar2 tr{
+	line-height: 0px;
+}
+#calendar2 td {
+	width: 99px;
+	height: 90px;
+	border: 1px solid #c8beb3;
+	color: #c8beb3;
+	font-size: 80%;
+	position: relative;
+	top: -37px;
+}
+span.first {
+	background-color: black;
+}

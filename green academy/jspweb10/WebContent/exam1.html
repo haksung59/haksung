@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb10</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+
+<script>
+	//주사위 눈의 숫자를 출력하시오.
+	
+	// 주사위 눈의 숫자를 출력하시오 - game.js 함수 정리
+	function dice(){
+		res = Math.floor(Math.random()*6) +1;
+		return res;
+	}
+	num = dice();
+	document.write("<img src='images/dice_"+num+".png'>");
+</script>
+</body>
+</html>

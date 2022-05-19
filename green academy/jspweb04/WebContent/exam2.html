@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb04_exam2</title>
+<style type="text/css">
+	div{
+		background-color: rgb(245,245,245);
+		width: 600px;
+		height: 450px;
+		text-align: center;
+	}
+	#language {
+		text-align: right;
+		margin: 10px;
+	}
+	h1 {
+		color: rgb(6,213,22);
+		font-size: 400%;
+		margin: 10px;
+		margin-bottom: 40px;
+		font-weight: bold;
+		text-align: center;
+	}
+	#userid,#password {
+		padding: 15px;
+		margin: 0 ;
+		font-size: 80%;
+		box-sizeing: border-box;
+		border: 1px solid lightgray;
+	}
+	input {
+		width: 60%;
+	}
+	#login {
+		padding: 15px;
+		margin: 5px;
+		font-size: 115%;
+		background-color: rgb(6,213,22);
+		border:none;
+		color: white;
+		width: 65%
+	}
+	#아이디찾기,#비밀번호찾기 {
+		border:0;
+		width:13%;
+		font-size: 70%;
+		margin:0;
+		padding:0;
+		background-color: rgb(245,245,245);
+	}
+	#회원가입 {
+		border:0;
+		width:10%;
+		font-size: 70%;
+		margin:0;
+		background-color: rgb(245,245,245);
+	}
+
+</style>
+</head>
+<body>
+	<div>
+	<p id="language">
+	<select name="language">
+		<option value="한국어">한국어</option>
+		<option value="日本語">日本語</option>
+		<option value="中國語">中國語</option>
+		<option value="English">English</option>
+	</select>
+	</p>
+	<h1>NAVER</h1>
+	<form action="jsp/formpro.jsp"
+		  method="GET">
+	<p>
+	<input type="text" id="userid" name="userid" placeholder="아이디">
+	</p>
+	<p>
+	<input type="password" id="password" name="password" placeholder="비밀번호">
+	</p>
+	<p>
+	<input type="button" id="login" name="login" value="로그인">
+	</p>
+	<br><br>
+	<p>
+	<input type="button" id="아이디찾기" name="아이디찾기" value="아이디 찾기">
+	<input type="button" id="비밀번호찾기" name="비밀번호찾기" value="비밀번호 찾기">
+	<input type="button" id="회원가입" name="회원가입" value="회원가입"></p>
+	</form>
+
+
+	</div>
+
+</body>
+</html>

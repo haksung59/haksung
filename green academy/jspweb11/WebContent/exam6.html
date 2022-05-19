@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type="text/css"></style>
+</head>
+<body>
+
+	<h3>제이쿼리 선택자 연습</h3>
+	
+	<span class="box2">안녕</span>
+	<span id="friend">친구들</span>
+	
+	<div id="box1">가가가</div>
+	<div class="box2">나나나</div>
+	<div my-data="1234">다다다</div>
+	
+	
+<script src="js/jquery-3.6.0.min.js"></script>	<!--사용하지 않으면 주석을 막을 것.-->
+<script>
+	$(".box2").css("background-color", "blue");
+	$("span").css("border","3px solid black");
+	$("#box1").css("background-color", "green");
+	$('[my-data="1234"]').css("background-color", "red");
+</script>
+</body>
+</html>
