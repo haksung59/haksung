@@ -4,14 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 
-class MainActivity : AppCompatActivity() {
+class Activity_01 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        Log.d("LifeCycle", "onCreate")
+        setContentView(R.layout.activity_01)
     }
-
     override fun onStart() {
         Log.d("LifeCycle", "onStart")
         super.onStart()
@@ -36,6 +33,4 @@ class MainActivity : AppCompatActivity() {
         Log.d("LifeCycle", "onDestroy")
         super.onDestroy()
     }
-
-
 }
