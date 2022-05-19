@@ -1,21 +1,0 @@
-server :
-    port : 80
-
-    
-spring :
-    mvc :
-        view :
-            prefix : /views/
-            suffix : .jsp
-                servlet:      multipart:          max-file-size: 10MB
-          max-request-size : 10MB
-
-    datasource : 
-        driver-class-name : com.mysql.jdbc.Driver
-        url : jdbc:mysql://localhost:3306/jspweb?characterEncoding=utf-8
-        username : jsp
-        password : 1234
-        
-mybatis :
-    mapper-locations : mmm/**/*.xml
-    type-aliases-package : aaa.model
