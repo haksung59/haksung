@@ -7,11 +7,16 @@
     android:orientation="vertical"
     tools:context=".Homework01_calculator">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/calResult"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@color/black"/>
+        android:background="@color/black"
+        android:gravity="right|bottom"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -311,8 +316,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:padding="10dp"
         android:background="@drawable/black_background"
         >
+
+        <TextView
+            android:id="@+id/equal_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:text="="
+            android:gravity="center"
+            android:textSize="50dp"
+            android:textStyle="bold"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
