@@ -1,18 +1,3 @@
-# ---
-# jupyter:
-#   jupytext:
-#     formats: ipynb,py:light
-#     text_representation:
-#       extension: .py
-#       format_name: light
-#       format_version: '1.5'
-#       jupytext_version: 1.13.8
-#   kernelspec:
-#     display_name: Python 3 (ipykernel)
-#     language: python
-#     name: python3
-# ---
-
 # ## 꼭 알아둬야 할 자료 구조: 스택 (Stack)
 # * 데이터를 제한적으로 접근할 수 있는 구조
 #   - 한쪽 끝에서만 자료를 넣거나 뺄 수 있는 구조
@@ -31,18 +16,10 @@
 # * 주요 기능
 #   - push(): 데이터를 스택에 넣기
 #   - pop(): 데이터를 스택에서 꺼내기
-#   
-# * <font color='#BF360C'>Visualgo 사이트에서 시연해보며 이해하기 (push/pop 만 클릭해보며): https://visualgo.net/en/list
-# <br>
-# <img src="http://www.fun-coding.org/00_Images/stack.png" />
-#
-# > 엑셀로 이해해보기
 
 # ### 2. 스택 구조와 프로세스 스택
 # - 스택 구조는 프로세스 실행 구조의 가장 기본
 #   - 함수 호출시 프로세스 실행 구조를 스택과 비교해서 이해 필요
-#   
-# > 엑셀로 이해해보기
 
 # 재귀 함수
 def recursive(data):
@@ -71,13 +48,10 @@ recursive(4)
 
 # ### 4. 파이썬 리스트 기능에서 제공하는 메서드로 스택 사용해보기
 # * append(push), pop 메서드 제공
-
-# +
 data_stack = list()
 
 data_stack.append(1)
 data_stack.append(2)
-# -
 
 data_stack
 
@@ -86,12 +60,7 @@ data_stack[0]
 
 # ### 5. 프로그래밍 연습 
 
-# <div class="alert alert-block alert-warning">
-# <strong><font color="blue" size="3em">연습1: 리스트 변수로 스택을 다루는 pop, push 기능 구현해보기 (pop, push 함수 사용하지 않고 직접 구현해보기)</font></strong><br>
-#
-# </div>
-
-# +
+# 연습1: 리스트 변수로 스택을 다루는 pop, push 기능 구현해보기 (pop, push 함수 사용하지 않고 직접 구현해보기)
 stack_list = list()
 
 def push(data):
@@ -103,13 +72,7 @@ def pop():
     return data
 
 
-# -
-
 for index in range(10):
     push(index)
 
 pop()
-
-
-
-# ### 쉬어가기: [stacks are everywhere](https://youtu.be/I--rJx8cpMY)
