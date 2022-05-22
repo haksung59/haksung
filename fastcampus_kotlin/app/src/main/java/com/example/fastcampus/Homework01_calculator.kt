@@ -3,6 +3,7 @@ package com.example.fastcampus
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 
@@ -140,4 +141,31 @@ class Homework01_calculator : AppCompatActivity() {
             return input + plus
         }
     }
+
+
+    // 선생님 풀이
+//    fun setNumberTextViewListener() {
+//        val numberTextView : List<ViewText> = listOf(
+//            one,two,three,four,five,siz,seven,eight,nine,zero
+//        )
+//        val listener = object : View.OnClickListener {
+//            override fun onClick(v: View?) {
+//                input += (v as TextView).text
+//                result.text = input
+//            }
+//        }
+//    }
+
+//    fun findViews(){
+//        one = findViewById(R.id.one)
+//        two = findViewById(R.id.two)
+//        three = findViewById(R.id.three)
+//        four = findViewById(R.id.four)
+//        five = findViewById(R.id.five)
+//        six = findViewById(R.id.six)
+//        seven = findViewById(R.id.seven)
+//        eight = findViewById(R.id.eight)
+//        nine = findViewById(R.id.nine)
+//        zero = findViewById(R.id.zero)
+//    }
 }
