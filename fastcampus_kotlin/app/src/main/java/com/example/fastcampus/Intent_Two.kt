@@ -1,9 +1,12 @@
 package com.example.fastcampus
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcelable
 import android.util.Log
+import android.widget.ImageView
 import android.widget.TextView
 
 class Intent_Two : AppCompatActivity() {
@@ -25,6 +28,12 @@ class Intent_Two : AppCompatActivity() {
                 finish()
             }
         }
+
+        val imageView = findViewById<ImageView>(R.id.imageView)
+        val uri = Uri.parse(
+            intent.getParcelableExtra<Parcelable>(Intent.EXTRA_STREAM).toString()
+        )
+        imageView.setImageURI(uri)
 
     }
 }

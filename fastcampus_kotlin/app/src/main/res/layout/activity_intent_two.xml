@@ -12,4 +12,11 @@
         android:layout_height="100dp"
         android:background="@color/black"/>
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/arrows">
+    </ImageView>
+
 </androidx.appcompat.widget.LinearLayoutCompat>

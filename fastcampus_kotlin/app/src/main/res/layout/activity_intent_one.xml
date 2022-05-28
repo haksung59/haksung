@@ -51,8 +51,16 @@
         android:id="@+id/intent_five"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/teal_700"
+        android:background="@color/gray"
         android:gravity="center"
         android:text="명시적 인텐트 + activity result API"/>
+
+    <TextView
+        android:id="@+id/intent_six"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:text="명시적 인텐트 + ACTION"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
