@@ -1,5 +1,6 @@
 package com.example.fastcampus
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,7 +16,11 @@ class Homework03_addview : AppCompatActivity() {
         var userList = mutableListOf<User>()
 
         for(i in 1..30){
-            userList.add(User(""+i+"번째 사람", "010-0000-1111"))
+            if(i<10) {
+                userList.add(User("" + i + "번째 사람", "010-0000-000" + i))
+            }else {
+                userList.add(User("" + i + "번째 사람", "010-0000-00" + i))
+            }
         }
 
         val container = findViewById<LinearLayoutCompat>(R.id.container)
@@ -32,7 +37,12 @@ class Homework03_addview : AppCompatActivity() {
             userPhoneNum.text = it.userPhoneNum
 
             userItemView.setOnClickListener {
+                val intent = Intent(this@Homework03_addview, Homework03_detail::class.java)
 
+                intent.putExtra("userName", userName.text)
+                intent.putExtra("userPhoneNum", userPhoneNum.text)
+
+                startActivity(intent)
             }
 
             container.addView(userItemView)

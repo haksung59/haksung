@@ -13,40 +13,50 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FastCampus">
         <activity
-            android:name=".Homework02_webview"
-            android:exported="false" >
+            android:name=".RecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Homework04_recyclerview"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".Homework03_detail"
+            android:exported="false" />
+        <activity
+            android:name=".Homework02_webview"
+            android:exported="false" />
         <activity
             android:name=".AddViewActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".GlideActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ResourceActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ApplicationActivityTwo"
             android:exported="false" />
         <activity
             android:name=".ApplicationActivityOne"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".AsyncActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ThreadActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".FragmentActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".ActivityOne"
             android:exported="false" />
