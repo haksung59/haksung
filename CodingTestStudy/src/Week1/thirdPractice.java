@@ -30,6 +30,7 @@ public class thirdPractice {
         int max = 0;
         for(int i=0; i<length; i++) {
             sum += budgets[i];
+//            sum = sum + budgets[i];
             if(budgets[i]>max) {
                 max = budgets[i];
             }
@@ -42,6 +43,7 @@ public class thirdPractice {
             boolean[] check = new boolean[length];
             int avg = 0;
             int temp = 0;
+
             for(int i=0; i<length; i++) {
                 if(check[i]) continue;
                 else {
