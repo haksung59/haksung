@@ -13,13 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FastCampus">
         <activity
+            android:name=".Homework04_recyclerview"
+            android:exported="false" />
+        <activity
             android:name=".RecyclerViewActivity"
             android:exported="false" />
         <activity
             android:name=".ListViewActivity"
             android:exported="false" />
         <activity
-            android:name=".Homework04_recyclerview"
+            android:name=".RecyclerViewHomework"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Homework04_recyclerview">
+    tools:context=".RecyclerViewHomework">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/chatRecyclerView"
+    <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="100dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/chatSelfRecyclerView"
+        android:id="@+id/recyclerViewChat"
         android:layout_width="match_parent"
-        android:layout_height="100dp"/>
+        android:layout_height="match_parent"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>
