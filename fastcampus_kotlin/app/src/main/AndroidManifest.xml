@@ -13,6 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FastCampus">
         <activity
+            android:name=".SharedPreferenceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TablayoutPagerSimpleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TabLayoutPagerNewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TablayoutPagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerViewHomework"
+            android:exported="false" />
+        <activity
             android:name=".Homework04_recyclerview"
             android:exported="false" />
         <activity
@@ -22,7 +37,7 @@
             android:name=".ListViewActivity"
             android:exported="false" />
         <activity
-            android:name=".RecyclerViewHomework"
+            android:name=".RoomActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -92,11 +107,8 @@
             android:exported="false" />
         <activity
             android:name=".Homework03_addview"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.LAUNCHER" />
