@@ -1,8 +1,8 @@
-package Week1;
+package Week2;
 import java.util.ArrayList;
 import java.util.List;
 
-public class fifthStudy {
+public class FirstPractice {
 
     public static void main(String[] args) {
         int[][] input = new int[][] {{1,0,1,1,1}, {1,0,1,0,1}, {1,0,1,1,1}, {1,1,1,0,1}, {0,0,0,0,1}};

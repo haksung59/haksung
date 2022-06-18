@@ -3,7 +3,7 @@ package Week1;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class secondStudy {
+public class SecondStudy {
 
     public static void main(String[] args) {
         System.out.println(solution(new int[] {991, 30, 34, 5, 929}));

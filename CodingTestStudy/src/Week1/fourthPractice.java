@@ -2,7 +2,7 @@ package Week1;
 
 import java.util.Arrays;
 
-public class fourthPractice {
+public class FourthPractice {
 
     public static void main(String[] args) {
 

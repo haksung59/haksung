@@ -1,6 +1,6 @@
 package Week1;
 
-class firstPractice {
+class FirstPractice {
 
     public static void main(String[] args) {
         System.out.println(solution(20,new int[]{2,5,14},2));

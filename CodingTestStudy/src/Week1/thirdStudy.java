@@ -2,7 +2,7 @@ package Week1;
 
 import java.util.stream.IntStream;
 
-public class thirdStudy {
+public class ThirdStudy {
 
     public static void main(String[] args) {
         System.out.println(solution(new int[] {120,110,140,150}, 485));
