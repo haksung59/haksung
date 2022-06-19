@@ -40,6 +40,8 @@
         <entry key="app/src/main/res/layout/activity_three.xml" value="0.16145833333333334" />
         <entry key="app/src/main/res/layout/activity_tow.xml" value="0.16145833333333334" />
         <entry key="app/src/main/res/layout/activity_view_control02.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_youtube.xml" value="0.134375" />
+        <entry key="app/src/main/res/layout/activity_youtube_item.xml" value="0.134375" />
         <entry key="app/src/main/res/layout/car_item.xml" value="0.1359375" />
         <entry key="app/src/main/res/layout/chat_item.xml" value="0.13645833333333332" />
         <entry key="app/src/main/res/layout/chatitem_left.xml" value="0.16197916666666667" />
@@ -72,6 +74,7 @@
         <entry key="app/src/main/res/layout/resource.xml" value="0.1" />
         <entry key="app/src/main/res/layout/scrollview.xml" value="0.25" />
         <entry key="app/src/main/res/layout/student_item.xml" value="0.20052083333333334" />
+        <entry key="app/src/main/res/layout/youtube_list_item.xml" value="0.134375" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.151" />
         <entry key="app/src/main/res/xml/network_security_config.xml" value="0.13645833333333332" />
       </map>
