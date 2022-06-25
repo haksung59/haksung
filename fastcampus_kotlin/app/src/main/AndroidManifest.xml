@@ -16,9 +16,18 @@
         android:theme="@style/Theme.FastCampus"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".MelonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MelonDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".YoutubeActivity"
+            android:exported="false" />
+        <activity
             android:name=".YoutubeItemActivity"
-            android:screenOrientation="sensor"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="sensor" />
         <activity
             android:name=".PermissionActivity"
             android:exported="false" />
@@ -56,7 +65,7 @@
             android:name=".ListViewActivity"
             android:exported="false" />
         <activity
-            android:name=".YoutubeActivity"
+            android:name=".InstaJoin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

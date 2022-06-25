@@ -9,6 +9,8 @@
         <entry key="app/src/main/res/drawable/blue_background.xml" value="0.157" />
         <entry key="app/src/main/res/drawable/drawable_1.xml" value="0.151" />
         <entry key="app/src/main/res/drawable/drawable_2.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/insta_input_bg.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/insta_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_01.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/activity_add_view.xml" value="0.1359375" />
         <entry key="app/src/main/res/layout/activity_application_one.xml" value="0.11822916666666666" />
@@ -20,10 +22,13 @@
         <entry key="app/src/main/res/layout/activity_homework03_addview.xml" value="0.1359375" />
         <entry key="app/src/main/res/layout/activity_homework03_detail.xml" value="0.13645833333333332" />
         <entry key="app/src/main/res/layout/activity_homework04_recyclerview.xml" value="0.13645833333333332" />
+        <entry key="app/src/main/res/layout/activity_insta_join.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_intent_one.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_intent_two.xml" value="0.1359375" />
         <entry key="app/src/main/res/layout/activity_list_view.xml" value="0.13645833333333332" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_melon.xml" value="0.11724137931034483" />
+        <entry key="app/src/main/res/layout/activity_melon_detail.xml" value="0.11724137931034483" />
         <entry key="app/src/main/res/layout/activity_network.xml" value="0.13645833333333332" />
         <entry key="app/src/main/res/layout/activity_one.xml" value="0.16145833333333334" />
         <entry key="app/src/main/res/layout/activity_permission.xml" value="0.18333333333333332" />
@@ -69,6 +74,7 @@
         <entry key="app/src/main/res/layout/layoutconstraint_5.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/linearlayout_05.xml" value="0.25" />
         <entry key="app/src/main/res/layout/margin_padding.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/layout/melon_item.xml" value="0.134375" />
         <entry key="app/src/main/res/layout/relativelayout_06.xml" value="0.125" />
         <entry key="app/src/main/res/layout/relativelayout_2_06.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/resource.xml" value="0.1" />
