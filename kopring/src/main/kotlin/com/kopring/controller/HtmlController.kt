@@ -1,4 +1,4 @@
-package com.controller
+package com.kopring.controller
 
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
