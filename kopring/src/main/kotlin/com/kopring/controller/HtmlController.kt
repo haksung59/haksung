@@ -53,44 +53,37 @@ class HtmlController {
         try {
             //val cryptoPw=crypto(pw)
             val member = repository.save(Member(id, pw, name, sex))
+            if(id.isNotEmpty()) {
+                assert(member.id.isNotEmpty())
+                model.addAttribute("title", "sign success")
+            }
         }catch(e:Exception){
             e.printStackTrace()
         }
-
-        model.addAttribute("title", "sign success")
 
         return "index"
     }
 
-    @GetMapping("/login/hi")
+    @PostMapping("/login")
     fun postLogin(model:Model,
-                  session:HttpSession,
-                 @RequestParam(value="id") id:String,
-                 @RequestParam(value="password") password:String):String{
-        var pageName:String=""
-        try{
-            //val cryptoPw = crypto(password)
-            val db_member =repository.findById(id).orElseThrow()
+                  session: HttpSession,
+                  @RequestParam(value="id")id:String,
+                  @RequestParam(value="password")pw:String):String{
+        var pageName:String = ""
 
-            if(db_member != null){
-                val dbPw = db_member.pw
-                pageName = if(password == dbPw){
-                    session.setAttribute("id", db_member.id)
-                    model.addAttribute("title", "welcome")
-                    model.addAttribute("id", id)
-                    "welcome"
-                }else {
-                    model.addAttribute("title", "login")
-                    "login"
-                }
-            }
+        val member = repository.findById(id).orElseThrow()
 
-        }catch(e:Exception){
-            e.printStackTrace()
+        if(member.pw!=pw){
+            model.addAttribute("title", "fail")
+            pageName = "login"
+        }else {
+            session.setAttribute("info", member)
+            model.addAttribute("hi", member.id)
+            model.addAttribute("title", member.name)
+            pageName = "welcome"
         }
 
         return pageName
-
     }
 
 }
