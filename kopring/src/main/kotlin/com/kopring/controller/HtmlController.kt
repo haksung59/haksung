@@ -54,13 +54,11 @@ class HtmlController {
             //val cryptoPw=crypto(pw)
             val member = repository.save(Member(id, pw, name, sex))
             if(id.isNotEmpty()) {
-                assert(member.id.isNotEmpty())
                 model.addAttribute("title", "sign success")
             }
         }catch(e:Exception){
             e.printStackTrace()
         }
-
         return "index"
     }
 
