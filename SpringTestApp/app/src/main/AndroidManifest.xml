@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SpringTestApp"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".TestActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignActivity"
             android:exported="false" />
         <activity
