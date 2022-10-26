@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-mybatis.orgDTD Mapper 3.OEN"  "http:mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.test.healthcare.mapper.CoMapper">
+
+    <select id="test1" parameterType="kr.or.test.healthcare.request.RequestTest" resultType="kr.or.test.healthcare.response.ResponseTest">
+        select
+            id, name
+        from
+            member
+    </select>
+
+</mapper>
