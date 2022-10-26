@@ -3,7 +3,6 @@ package kr.or.test.healthcare.response;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.apache.ibatis.jdbc.Null;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -29,7 +28,7 @@ public class Response {
     private String status;
 
     @Schema
-    private List errors;
+    private List errors = new ArrayList();
 
     @Schema
     private String message;

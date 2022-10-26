@@ -1,6 +1,7 @@
 package kr.or.test.healthcare.service;
 
 import kr.or.test.healthcare.mapper.CoMapper;
+import kr.or.test.healthcare.request.RequestPushTest;
 import kr.or.test.healthcare.request.RequestTest;
 import kr.or.test.healthcare.response.Response;
 import kr.or.test.healthcare.response.ResponseTest;
@@ -60,6 +61,10 @@ public class CoService {
         return response;
     }
 
-//    public Resp
+    public Response pushTest(RequestPushTest request) throws Exception {
+        startTime = System.currentTimeMillis();
+        Response response = new Response();
+        return response;
+    }
 
 }

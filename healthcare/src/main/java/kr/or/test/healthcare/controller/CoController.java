@@ -5,7 +5,6 @@ import io.swagger.v3.oas.annotations.Operation;
 import kr.or.test.healthcare.request.RequestTest;
 import kr.or.test.healthcare.response.Response;
 import kr.or.test.healthcare.service.CoService;
-import org.apache.ibatis.annotations.Options;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
