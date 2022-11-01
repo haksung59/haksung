@@ -35,12 +35,6 @@ public class DatabaseConfig {
         return sqlSessionFactoryBean.getObject();
     }
 
-    @Bean(name = "db1SqlSessionTemplate")
-    @Primary
-    public SqlSessionTemplate db1SqlSessionTemplate(SqlSessionFactory db1SqlSessionFactory) throws Exception {
-        return new SqlSessionTemplate(db1SqlSessionFactory);
-    }
-
     //db2
     @Bean(name = "db2DataSource")
     @ConfigurationProperties(prefix = "spring.db2.datasource")
@@ -54,12 +48,6 @@ public class DatabaseConfig {
         sqlSessionFactoryBean.setDataSource(db2DataSource);
         sqlSessionFactoryBean.setMapperLocations(applicationContext.getResources("classpath:mybatis/mapper/*Mapper.xml"));
         return sqlSessionFactoryBean.getObject();
-    }
-
-    @Bean(name = "db2SqlSessionTemplate")
-    @Primary
-    public SqlSessionTemplate db2SqlSessionTemplate(SqlSessionFactory db2SqlSessionFactory) throws Exception {
-        return new SqlSessionTemplate(db2SqlSessionFactory);
     }
 
 }
