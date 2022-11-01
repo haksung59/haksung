@@ -1,20 +1,22 @@
 //
-//  PractiveUIMemoApp.swift
-//  PractiveUIMemo
+//  PracticeSwiftUIMemoApp.swift
+//  PracticeSwiftUIMemo
 //
-//  Created by haksung on 2022/10/27.
+//  Created by haksung on 2022/11/01.
 //
 
 import SwiftUI
 
 @main
-struct PractiveUIMemoApp: App {
+struct PracticeSwiftUIMemoApp: App {
     let persistenceController = PersistenceController.shared
+    let store = MemoStore()
 
     var body: some Scene {
         WindowGroup {
             MemoListScene()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(store)
         }
     }
 }

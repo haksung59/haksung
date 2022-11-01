@@ -1,8 +1,8 @@
 //
 //  Persistence.swift
-//  PractiveUIMemo
+//  PracticeSwiftUIMemo
 //
-//  Created by haksung on 2022/10/27.
+//  Created by haksung on 2022/11/01.
 //
 
 import CoreData
@@ -31,7 +31,7 @@ struct PersistenceController {
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "PractiveUIMemo")
+        container = NSPersistentContainer(name: "PracticeSwiftUIMemo")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

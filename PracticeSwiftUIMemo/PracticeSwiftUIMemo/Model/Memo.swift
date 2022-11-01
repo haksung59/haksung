@@ -1,6 +1,6 @@
 //
 //  Memo.swift
-//  PractiveUIMemo
+//  PracticeSwiftUIMemo
 //
 //  Created by haksung on 2022/11/01.
 //

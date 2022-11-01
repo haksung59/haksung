@@ -7,30 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F17ADC02911443A00F6CAAA /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17ADBF2911443A00F6CAAA /* Memo.swift */; };
-		4F17ADC22911450400F6CAAA /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17ADC12911450400F6CAAA /* MemoStore.swift */; };
-		4F43A4D9290AD08300185DE5 /* PractiveUIMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F43A4D8290AD08300185DE5 /* PractiveUIMemoApp.swift */; };
-		4F43A4DB290AD08300185DE5 /* MemoListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F43A4DA290AD08300185DE5 /* MemoListScene.swift */; };
-		4F43A4DD290AD08400185DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F43A4DC290AD08400185DE5 /* Assets.xcassets */; };
-		4F43A4E0290AD08400185DE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F43A4DF290AD08400185DE5 /* Preview Assets.xcassets */; };
-		4F43A4E2290AD08400185DE5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F43A4E1290AD08400185DE5 /* Persistence.swift */; };
-		4F43A4E5290AD08400185DE5 /* PractiveUIMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F43A4E3290AD08400185DE5 /* PractiveUIMemo.xcdatamodeld */; };
+		4F17ADD02911477E00F6CAAA /* PracticeSwiftUIMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17ADCF2911477E00F6CAAA /* PracticeSwiftUIMemoApp.swift */; };
+		4F17ADD22911477E00F6CAAA /* MemoListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17ADD12911477E00F6CAAA /* MemoListScene.swift */; };
+		4F17ADD42911478000F6CAAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F17ADD32911478000F6CAAA /* Assets.xcassets */; };
+		4F17ADD72911478000F6CAAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F17ADD62911478000F6CAAA /* Preview Assets.xcassets */; };
+		4F17ADD92911478000F6CAAA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17ADD82911478000F6CAAA /* Persistence.swift */; };
+		4F17ADDC2911478000F6CAAA /* PracticeSwiftUIMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F17ADDA2911478000F6CAAA /* PracticeSwiftUIMemo.xcdatamodeld */; };
+		4F17ADE5291148E000F6CAAA /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17ADE3291148E000F6CAAA /* Memo.swift */; };
+		4F17ADE6291148E000F6CAAA /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17ADE4291148E000F6CAAA /* MemoStore.swift */; };
+		4F17ADE829114ACA00F6CAAA /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17ADE729114ACA00F6CAAA /* MemoStore.swift */; };
+		4F17ADEA29114AFC00F6CAAA /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17ADE929114AFC00F6CAAA /* Memo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F17ADBF2911443A00F6CAAA /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
-		4F17ADC12911450400F6CAAA /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
-		4F43A4D5290AD08300185DE5 /* PractiveUIMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PractiveUIMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F43A4D8290AD08300185DE5 /* PractiveUIMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiveUIMemoApp.swift; sourceTree = "<group>"; };
-		4F43A4DA290AD08300185DE5 /* MemoListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListScene.swift; sourceTree = "<group>"; };
-		4F43A4DC290AD08400185DE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4F43A4DF290AD08400185DE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4F43A4E1290AD08400185DE5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		4F43A4E4290AD08400185DE5 /* PractiveUIMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PractiveUIMemo.xcdatamodel; sourceTree = "<group>"; };
+		4F17ADCC2911477E00F6CAAA /* PracticeSwiftUIMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeSwiftUIMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F17ADCF2911477E00F6CAAA /* PracticeSwiftUIMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeSwiftUIMemoApp.swift; sourceTree = "<group>"; };
+		4F17ADD12911477E00F6CAAA /* MemoListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListScene.swift; sourceTree = "<group>"; };
+		4F17ADD32911478000F6CAAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F17ADD62911478000F6CAAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4F17ADD82911478000F6CAAA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4F17ADDB2911478000F6CAAA /* PracticeSwiftUIMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PracticeSwiftUIMemo.xcdatamodel; sourceTree = "<group>"; };
+		4F17ADE3291148E000F6CAAA /* Memo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Memo.swift; path = ../../../../Memo.swift; sourceTree = "<group>"; };
+		4F17ADE4291148E000F6CAAA /* MemoStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemoStore.swift; path = ../../../../MemoStore.swift; sourceTree = "<group>"; };
+		4F17ADE729114ACA00F6CAAA /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
+		4F17ADE929114AFC00F6CAAA /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4F43A4D2290AD08300185DE5 /* Frameworks */ = {
+		4F17ADC92911477E00F6CAAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,89 +44,91 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F17ADBE2911441B00F6CAAA /* Model */ = {
+		4F17ADC32911477E00F6CAAA = {
 			isa = PBXGroup;
 			children = (
-				4F17ADBF2911443A00F6CAAA /* Memo.swift */,
-				4F17ADC12911450400F6CAAA /* MemoStore.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4F43A4CC290AD08300185DE5 = {
-			isa = PBXGroup;
-			children = (
-				4F43A4D7290AD08300185DE5 /* PractiveUIMemo */,
-				4F43A4D6290AD08300185DE5 /* Products */,
+				4F17ADCE2911477E00F6CAAA /* PracticeSwiftUIMemo */,
+				4F17ADCD2911477E00F6CAAA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4F43A4D6290AD08300185DE5 /* Products */ = {
+		4F17ADCD2911477E00F6CAAA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F43A4D5290AD08300185DE5 /* PractiveUIMemo.app */,
+				4F17ADCC2911477E00F6CAAA /* PracticeSwiftUIMemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F43A4D7290AD08300185DE5 /* PractiveUIMemo */ = {
+		4F17ADCE2911477E00F6CAAA /* PracticeSwiftUIMemo */ = {
 			isa = PBXGroup;
 			children = (
-				4F17ADBE2911441B00F6CAAA /* Model */,
-				4F43A4D8290AD08300185DE5 /* PractiveUIMemoApp.swift */,
-				4F43A4DA290AD08300185DE5 /* MemoListScene.swift */,
-				4F43A4DC290AD08400185DE5 /* Assets.xcassets */,
-				4F43A4E1290AD08400185DE5 /* Persistence.swift */,
-				4F43A4E3290AD08400185DE5 /* PractiveUIMemo.xcdatamodeld */,
-				4F43A4DE290AD08400185DE5 /* Preview Content */,
+				4F17ADE2291148C900F6CAAA /* Model */,
+				4F17ADCF2911477E00F6CAAA /* PracticeSwiftUIMemoApp.swift */,
+				4F17ADD12911477E00F6CAAA /* MemoListScene.swift */,
+				4F17ADD32911478000F6CAAA /* Assets.xcassets */,
+				4F17ADD82911478000F6CAAA /* Persistence.swift */,
+				4F17ADDA2911478000F6CAAA /* PracticeSwiftUIMemo.xcdatamodeld */,
+				4F17ADD52911478000F6CAAA /* Preview Content */,
 			);
-			path = PractiveUIMemo;
+			path = PracticeSwiftUIMemo;
 			sourceTree = "<group>";
 		};
-		4F43A4DE290AD08400185DE5 /* Preview Content */ = {
+		4F17ADD52911478000F6CAAA /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				4F43A4DF290AD08400185DE5 /* Preview Assets.xcassets */,
+				4F17ADD62911478000F6CAAA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4F17ADE2291148C900F6CAAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F17ADE3291148E000F6CAAA /* Memo.swift */,
+				4F17ADE4291148E000F6CAAA /* MemoStore.swift */,
+				4F17ADE729114ACA00F6CAAA /* MemoStore.swift */,
+				4F17ADE929114AFC00F6CAAA /* Memo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F43A4D4290AD08300185DE5 /* PractiveUIMemo */ = {
+		4F17ADCB2911477E00F6CAAA /* PracticeSwiftUIMemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F43A4E8290AD08400185DE5 /* Build configuration list for PBXNativeTarget "PractiveUIMemo" */;
+			buildConfigurationList = 4F17ADDF2911478000F6CAAA /* Build configuration list for PBXNativeTarget "PracticeSwiftUIMemo" */;
 			buildPhases = (
-				4F43A4D1290AD08300185DE5 /* Sources */,
-				4F43A4D2290AD08300185DE5 /* Frameworks */,
-				4F43A4D3290AD08300185DE5 /* Resources */,
+				4F17ADC82911477E00F6CAAA /* Sources */,
+				4F17ADC92911477E00F6CAAA /* Frameworks */,
+				4F17ADCA2911477E00F6CAAA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PractiveUIMemo;
-			productName = PractiveUIMemo;
-			productReference = 4F43A4D5290AD08300185DE5 /* PractiveUIMemo.app */;
+			name = PracticeSwiftUIMemo;
+			productName = PracticeSwiftUIMemo;
+			productReference = 4F17ADCC2911477E00F6CAAA /* PracticeSwiftUIMemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4F43A4CD290AD08300185DE5 /* Project object */ = {
+		4F17ADC42911477E00F6CAAA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					4F43A4D4290AD08300185DE5 = {
+					4F17ADCB2911477E00F6CAAA = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 4F43A4D0290AD08300185DE5 /* Build configuration list for PBXProject "PractiveUIMemo" */;
+			buildConfigurationList = 4F17ADC72911477E00F6CAAA /* Build configuration list for PBXProject "PracticeSwiftUIMemo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -130,46 +136,48 @@
 				en,
 				Base,
 			);
-			mainGroup = 4F43A4CC290AD08300185DE5;
-			productRefGroup = 4F43A4D6290AD08300185DE5 /* Products */;
+			mainGroup = 4F17ADC32911477E00F6CAAA;
+			productRefGroup = 4F17ADCD2911477E00F6CAAA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F43A4D4290AD08300185DE5 /* PractiveUIMemo */,
+				4F17ADCB2911477E00F6CAAA /* PracticeSwiftUIMemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4F43A4D3290AD08300185DE5 /* Resources */ = {
+		4F17ADCA2911477E00F6CAAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F43A4E0290AD08400185DE5 /* Preview Assets.xcassets in Resources */,
-				4F43A4DD290AD08400185DE5 /* Assets.xcassets in Resources */,
+				4F17ADD72911478000F6CAAA /* Preview Assets.xcassets in Resources */,
+				4F17ADD42911478000F6CAAA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F43A4D1290AD08300185DE5 /* Sources */ = {
+		4F17ADC82911477E00F6CAAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F43A4E2290AD08400185DE5 /* Persistence.swift in Sources */,
-				4F17ADC22911450400F6CAAA /* MemoStore.swift in Sources */,
-				4F43A4E5290AD08400185DE5 /* PractiveUIMemo.xcdatamodeld in Sources */,
-				4F43A4DB290AD08300185DE5 /* MemoListScene.swift in Sources */,
-				4F43A4D9290AD08300185DE5 /* PractiveUIMemoApp.swift in Sources */,
-				4F17ADC02911443A00F6CAAA /* Memo.swift in Sources */,
+				4F17ADE829114ACA00F6CAAA /* MemoStore.swift in Sources */,
+				4F17ADDC2911478000F6CAAA /* PracticeSwiftUIMemo.xcdatamodeld in Sources */,
+				4F17ADE6291148E000F6CAAA /* MemoStore.swift in Sources */,
+				4F17ADEA29114AFC00F6CAAA /* Memo.swift in Sources */,
+				4F17ADD92911478000F6CAAA /* Persistence.swift in Sources */,
+				4F17ADD22911477E00F6CAAA /* MemoListScene.swift in Sources */,
+				4F17ADD02911477E00F6CAAA /* PracticeSwiftUIMemoApp.swift in Sources */,
+				4F17ADE5291148E000F6CAAA /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4F43A4E6290AD08400185DE5 /* Debug */ = {
+		4F17ADDD2911478000F6CAAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -229,7 +237,7 @@
 			};
 			name = Debug;
 		};
-		4F43A4E7290AD08400185DE5 /* Release */ = {
+		4F17ADDE2911478000F6CAAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -283,14 +291,14 @@
 			};
 			name = Release;
 		};
-		4F43A4E9290AD08400185DE5 /* Debug */ = {
+		4F17ADE02911478000F6CAAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PractiveUIMemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PracticeSwiftUIMemo/Preview Content\"";
 				DEVELOPMENT_TEAM = 3RXFS5YGZQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -304,7 +312,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Hak-sung-Kim.PractiveUIMemo";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hak-sung-Kim.PracticeSwiftUIMemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -312,14 +320,14 @@
 			};
 			name = Debug;
 		};
-		4F43A4EA290AD08400185DE5 /* Release */ = {
+		4F17ADE12911478000F6CAAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PractiveUIMemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PracticeSwiftUIMemo/Preview Content\"";
 				DEVELOPMENT_TEAM = 3RXFS5YGZQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -333,7 +341,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Hak-sung-Kim.PractiveUIMemo";
+				PRODUCT_BUNDLE_IDENTIFIER = "Hak-sung-Kim.PracticeSwiftUIMemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -344,20 +352,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F43A4D0290AD08300185DE5 /* Build configuration list for PBXProject "PractiveUIMemo" */ = {
+		4F17ADC72911477E00F6CAAA /* Build configuration list for PBXProject "PracticeSwiftUIMemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F43A4E6290AD08400185DE5 /* Debug */,
-				4F43A4E7290AD08400185DE5 /* Release */,
+				4F17ADDD2911478000F6CAAA /* Debug */,
+				4F17ADDE2911478000F6CAAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F43A4E8290AD08400185DE5 /* Build configuration list for PBXNativeTarget "PractiveUIMemo" */ = {
+		4F17ADDF2911478000F6CAAA /* Build configuration list for PBXNativeTarget "PracticeSwiftUIMemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F43A4E9290AD08400185DE5 /* Debug */,
-				4F43A4EA290AD08400185DE5 /* Release */,
+				4F17ADE02911478000F6CAAA /* Debug */,
+				4F17ADE12911478000F6CAAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -365,17 +373,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4F43A4E3290AD08400185DE5 /* PractiveUIMemo.xcdatamodeld */ = {
+		4F17ADDA2911478000F6CAAA /* PracticeSwiftUIMemo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4F43A4E4290AD08400185DE5 /* PractiveUIMemo.xcdatamodel */,
+				4F17ADDB2911478000F6CAAA /* PracticeSwiftUIMemo.xcdatamodel */,
 			);
-			currentVersion = 4F43A4E4290AD08400185DE5 /* PractiveUIMemo.xcdatamodel */;
-			path = PractiveUIMemo.xcdatamodeld;
+			currentVersion = 4F17ADDB2911478000F6CAAA /* PracticeSwiftUIMemo.xcdatamodel */;
+			path = PracticeSwiftUIMemo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 4F43A4CD290AD08300185DE5 /* Project object */;
+	rootObject = 4F17ADC42911477E00F6CAAA /* Project object */;
 }
