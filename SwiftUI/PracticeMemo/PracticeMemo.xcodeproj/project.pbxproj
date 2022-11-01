@@ -7,26 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F17AE542911557C00F6CAAA /* PracticeSwiftUIMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17AE532911557C00F6CAAA /* PracticeSwiftUIMemoApp.swift */; };
-		4F17AE562911557C00F6CAAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17AE552911557C00F6CAAA /* ContentView.swift */; };
-		4F17AE582911557D00F6CAAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F17AE572911557D00F6CAAA /* Assets.xcassets */; };
-		4F17AE5B2911557D00F6CAAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F17AE5A2911557D00F6CAAA /* Preview Assets.xcassets */; };
-		4F17AE5D2911557D00F6CAAA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17AE5C2911557D00F6CAAA /* Persistence.swift */; };
-		4F17AE602911557D00F6CAAA /* PracticeSwiftUIMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F17AE5E2911557D00F6CAAA /* PracticeSwiftUIMemo.xcdatamodeld */; };
+		4FD60D8329115635002BAC30 /* PracticeMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD60D8229115635002BAC30 /* PracticeMemoApp.swift */; };
+		4FD60D8529115635002BAC30 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD60D8429115635002BAC30 /* Persistence.swift */; };
+		4FD60D8829115635002BAC30 /* PracticeMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4FD60D8629115635002BAC30 /* PracticeMemo.xcdatamodeld */; };
+		4FD60D8C29115635002BAC30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD60D8B29115635002BAC30 /* Assets.xcassets */; };
+		4FD60D9029115635002BAC30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD60D8F29115635002BAC30 /* Preview Assets.xcassets */; };
+		4FD60D9729115686002BAC30 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD60D9629115686002BAC30 /* MainListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F17AE502911557C00F6CAAA /* PracticeSwiftUIMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeSwiftUIMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F17AE532911557C00F6CAAA /* PracticeSwiftUIMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeSwiftUIMemoApp.swift; sourceTree = "<group>"; };
-		4F17AE552911557C00F6CAAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		4F17AE572911557D00F6CAAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4F17AE5A2911557D00F6CAAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4F17AE5C2911557D00F6CAAA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		4F17AE5F2911557D00F6CAAA /* PracticeSwiftUIMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PracticeSwiftUIMemo.xcdatamodel; sourceTree = "<group>"; };
+		4FD60D7F29115635002BAC30 /* PracticeMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD60D8229115635002BAC30 /* PracticeMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeMemoApp.swift; sourceTree = "<group>"; };
+		4FD60D8429115635002BAC30 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4FD60D8729115635002BAC30 /* PracticeMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PracticeMemo.xcdatamodel; sourceTree = "<group>"; };
+		4FD60D8B29115635002BAC30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4FD60D8D29115635002BAC30 /* PracticeMemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PracticeMemo.entitlements; sourceTree = "<group>"; };
+		4FD60D8F29115635002BAC30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FD60D9629115686002BAC30 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4F17AE4D2911557C00F6CAAA /* Frameworks */ = {
+		4FD60D7C29115635002BAC30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,79 +37,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F17AE472911557C00F6CAAA = {
+		4FD60D7629115635002BAC30 = {
 			isa = PBXGroup;
 			children = (
-				4F17AE522911557C00F6CAAA /* PracticeSwiftUIMemo */,
-				4F17AE512911557C00F6CAAA /* Products */,
+				4FD60D8129115635002BAC30 /* PracticeMemo */,
+				4FD60D8029115635002BAC30 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4F17AE512911557C00F6CAAA /* Products */ = {
+		4FD60D8029115635002BAC30 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F17AE502911557C00F6CAAA /* PracticeSwiftUIMemo.app */,
+				4FD60D7F29115635002BAC30 /* PracticeMemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4F17AE522911557C00F6CAAA /* PracticeSwiftUIMemo */ = {
+		4FD60D8129115635002BAC30 /* PracticeMemo */ = {
 			isa = PBXGroup;
 			children = (
-				4F17AE532911557C00F6CAAA /* PracticeSwiftUIMemoApp.swift */,
-				4F17AE552911557C00F6CAAA /* ContentView.swift */,
-				4F17AE572911557D00F6CAAA /* Assets.xcassets */,
-				4F17AE5C2911557D00F6CAAA /* Persistence.swift */,
-				4F17AE5E2911557D00F6CAAA /* PracticeSwiftUIMemo.xcdatamodeld */,
-				4F17AE592911557D00F6CAAA /* Preview Content */,
+				4FD60D99291156A5002BAC30 /* Memory */,
+				4FD60D982911569E002BAC30 /* CoreData */,
+				4FD60D8429115635002BAC30 /* Persistence.swift */,
+				4FD60D8B29115635002BAC30 /* Assets.xcassets */,
+				4FD60D8D29115635002BAC30 /* PracticeMemo.entitlements */,
+				4FD60D8629115635002BAC30 /* PracticeMemo.xcdatamodeld */,
+				4FD60D8E29115635002BAC30 /* Preview Content */,
 			);
-			path = PracticeSwiftUIMemo;
+			path = PracticeMemo;
 			sourceTree = "<group>";
 		};
-		4F17AE592911557D00F6CAAA /* Preview Content */ = {
+		4FD60D8E29115635002BAC30 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				4F17AE5A2911557D00F6CAAA /* Preview Assets.xcassets */,
+				4FD60D8F29115635002BAC30 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4FD60D982911569E002BAC30 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				4FD60D8229115635002BAC30 /* PracticeMemoApp.swift */,
+				4FD60D9629115686002BAC30 /* MainListView.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		4FD60D99291156A5002BAC30 /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Memory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F17AE4F2911557C00F6CAAA /* PracticeSwiftUIMemo */ = {
+		4FD60D7E29115635002BAC30 /* PracticeMemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F17AE632911557D00F6CAAA /* Build configuration list for PBXNativeTarget "PracticeSwiftUIMemo" */;
+			buildConfigurationList = 4FD60D9329115635002BAC30 /* Build configuration list for PBXNativeTarget "PracticeMemo" */;
 			buildPhases = (
-				4F17AE4C2911557C00F6CAAA /* Sources */,
-				4F17AE4D2911557C00F6CAAA /* Frameworks */,
-				4F17AE4E2911557C00F6CAAA /* Resources */,
+				4FD60D7B29115635002BAC30 /* Sources */,
+				4FD60D7C29115635002BAC30 /* Frameworks */,
+				4FD60D7D29115635002BAC30 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PracticeSwiftUIMemo;
-			productName = PracticeSwiftUIMemo;
-			productReference = 4F17AE502911557C00F6CAAA /* PracticeSwiftUIMemo.app */;
+			name = PracticeMemo;
+			productName = PracticeMemo;
+			productReference = 4FD60D7F29115635002BAC30 /* PracticeMemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4F17AE482911557C00F6CAAA /* Project object */ = {
+		4FD60D7729115635002BAC30 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					4F17AE4F2911557C00F6CAAA = {
+					4FD60D7E29115635002BAC30 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 4F17AE4B2911557C00F6CAAA /* Build configuration list for PBXProject "PracticeSwiftUIMemo" */;
+			buildConfigurationList = 4FD60D7A29115635002BAC30 /* Build configuration list for PBXProject "PracticeMemo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,44 +134,44 @@
 				en,
 				Base,
 			);
-			mainGroup = 4F17AE472911557C00F6CAAA;
-			productRefGroup = 4F17AE512911557C00F6CAAA /* Products */;
+			mainGroup = 4FD60D7629115635002BAC30;
+			productRefGroup = 4FD60D8029115635002BAC30 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F17AE4F2911557C00F6CAAA /* PracticeSwiftUIMemo */,
+				4FD60D7E29115635002BAC30 /* PracticeMemo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4F17AE4E2911557C00F6CAAA /* Resources */ = {
+		4FD60D7D29115635002BAC30 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F17AE5B2911557D00F6CAAA /* Preview Assets.xcassets in Resources */,
-				4F17AE582911557D00F6CAAA /* Assets.xcassets in Resources */,
+				4FD60D9029115635002BAC30 /* Preview Assets.xcassets in Resources */,
+				4FD60D8C29115635002BAC30 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4F17AE4C2911557C00F6CAAA /* Sources */ = {
+		4FD60D7B29115635002BAC30 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F17AE602911557D00F6CAAA /* PracticeSwiftUIMemo.xcdatamodeld in Sources */,
-				4F17AE5D2911557D00F6CAAA /* Persistence.swift in Sources */,
-				4F17AE562911557C00F6CAAA /* ContentView.swift in Sources */,
-				4F17AE542911557C00F6CAAA /* PracticeSwiftUIMemoApp.swift in Sources */,
+				4FD60D8829115635002BAC30 /* PracticeMemo.xcdatamodeld in Sources */,
+				4FD60D9729115686002BAC30 /* MainListView.swift in Sources */,
+				4FD60D8329115635002BAC30 /* PracticeMemoApp.swift in Sources */,
+				4FD60D8529115635002BAC30 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4F17AE612911557D00F6CAAA /* Debug */ = {
+		4FD60D9129115635002BAC30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -203,17 +221,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		4F17AE622911557D00F6CAAA /* Release */ = {
+		4FD60D9229115635002BAC30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -257,68 +273,83 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		4F17AE642911557D00F6CAAA /* Debug */ = {
+		4FD60D9429115635002BAC30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PracticeMemo/PracticeMemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PracticeSwiftUIMemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PracticeMemo/Preview Content\"";
 				DEVELOPMENT_TEAM = 3RXFS5YGZQ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.haksung.PracticeSwiftUIMemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haksung.PracticeMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4F17AE652911557D00F6CAAA /* Release */ = {
+		4FD60D9529115635002BAC30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PracticeMemo/PracticeMemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PracticeSwiftUIMemo/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"PracticeMemo/Preview Content\"";
 				DEVELOPMENT_TEAM = 3RXFS5YGZQ;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.haksung.PracticeSwiftUIMemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haksung.PracticeMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -328,20 +359,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F17AE4B2911557C00F6CAAA /* Build configuration list for PBXProject "PracticeSwiftUIMemo" */ = {
+		4FD60D7A29115635002BAC30 /* Build configuration list for PBXProject "PracticeMemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F17AE612911557D00F6CAAA /* Debug */,
-				4F17AE622911557D00F6CAAA /* Release */,
+				4FD60D9129115635002BAC30 /* Debug */,
+				4FD60D9229115635002BAC30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F17AE632911557D00F6CAAA /* Build configuration list for PBXNativeTarget "PracticeSwiftUIMemo" */ = {
+		4FD60D9329115635002BAC30 /* Build configuration list for PBXNativeTarget "PracticeMemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F17AE642911557D00F6CAAA /* Debug */,
-				4F17AE652911557D00F6CAAA /* Release */,
+				4FD60D9429115635002BAC30 /* Debug */,
+				4FD60D9529115635002BAC30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -349,17 +380,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		4F17AE5E2911557D00F6CAAA /* PracticeSwiftUIMemo.xcdatamodeld */ = {
+		4FD60D8629115635002BAC30 /* PracticeMemo.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				4F17AE5F2911557D00F6CAAA /* PracticeSwiftUIMemo.xcdatamodel */,
+				4FD60D8729115635002BAC30 /* PracticeMemo.xcdatamodel */,
 			);
-			currentVersion = 4F17AE5F2911557D00F6CAAA /* PracticeSwiftUIMemo.xcdatamodel */;
-			path = PracticeSwiftUIMemo.xcdatamodeld;
+			currentVersion = 4FD60D8729115635002BAC30 /* PracticeMemo.xcdatamodel */;
+			path = PracticeMemo.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 4F17AE482911557C00F6CAAA /* Project object */;
+	rootObject = 4FD60D7729115635002BAC30 /* Project object */;
 }
