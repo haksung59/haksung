@@ -25,7 +25,10 @@ public class CoService {
     private long startTime;
 
     @Value("${server.name}")
-    String serverName;
+    private String serverName;
+
+    @Value("${server.Url}")
+    private String serverUrl;
 
     @Resource(name = "db1SqlSessionFactory")
     private SqlSessionFactory db1;
@@ -75,13 +78,8 @@ public class CoService {
         if(request.getUri() != null){
             request.setUri(URLDecoder.decode(request.getUri(), "UTF-8"));
         }
-        String surl = "";
 
-        if(serverName.equals("dev") || serverName.equals("local")){
-            surl = "http://localhost:8080/" + serverName +"/push";
-        }else{
-            surl = "http://localhost:8080/push";
-        }
+        String surl = serverUrl + "/push";
 
         URL url = new URL(surl);
 
@@ -89,7 +87,7 @@ public class CoService {
 
         conn.setRequestMethod("POST");
         conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
-//        conn.setRequestProperty("accKey", "~~~accKey~~~");
+//        conn.setRequestProperty("accKey", "~~~~accKey~~~~");
         conn.setConnectTimeout(10000);
         conn.setReadTimeout(10000);
 

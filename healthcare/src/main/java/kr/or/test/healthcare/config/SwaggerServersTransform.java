@@ -17,24 +17,16 @@ public class SwaggerServersTransform implements WebMvcOpenApiTransformationFilte
     @Value("${server.name")
     private String serverName;
 
+    @Value("${server.url}")
+    private String serverUrl;
+
     @Override
     public OpenAPI transform(OpenApiTransformationContext<HttpServletRequest> context) {
         OpenAPI openAPI = context.getSpecification();
 
         Server server = new Server();
         server.setDescription(serverName);
-
-        switch(serverName) {
-            case "local" :
-                server.setUrl("http://localhost:8080/local");
-                break;
-            case "dev" :
-                server.setUrl("http://localhost:8080/dev");
-                break;
-            case "prod" :
-                server.setUrl("http://localhost:8080/prod");
-                break;
-        }
+        server.setUrl(serverUrl);
 
         openAPI.setServers(Arrays.asList(server));
 

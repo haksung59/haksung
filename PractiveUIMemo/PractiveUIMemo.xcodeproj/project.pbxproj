@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F17ADC02911443A00F6CAAA /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17ADBF2911443A00F6CAAA /* Memo.swift */; };
+		4F17ADC22911450400F6CAAA /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17ADC12911450400F6CAAA /* MemoStore.swift */; };
 		4F43A4D9290AD08300185DE5 /* PractiveUIMemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F43A4D8290AD08300185DE5 /* PractiveUIMemoApp.swift */; };
 		4F43A4DB290AD08300185DE5 /* MemoListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F43A4DA290AD08300185DE5 /* MemoListScene.swift */; };
 		4F43A4DD290AD08400185DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F43A4DC290AD08400185DE5 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F17ADBF2911443A00F6CAAA /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		4F17ADC12911450400F6CAAA /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
 		4F43A4D5290AD08300185DE5 /* PractiveUIMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PractiveUIMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F43A4D8290AD08300185DE5 /* PractiveUIMemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PractiveUIMemoApp.swift; sourceTree = "<group>"; };
 		4F43A4DA290AD08300185DE5 /* MemoListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListScene.swift; sourceTree = "<group>"; };
@@ -36,6 +40,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F17ADBE2911441B00F6CAAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F17ADBF2911443A00F6CAAA /* Memo.swift */,
+				4F17ADC12911450400F6CAAA /* MemoStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		4F43A4CC290AD08300185DE5 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +68,7 @@
 		4F43A4D7290AD08300185DE5 /* PractiveUIMemo */ = {
 			isa = PBXGroup;
 			children = (
+				4F17ADBE2911441B00F6CAAA /* Model */,
 				4F43A4D8290AD08300185DE5 /* PractiveUIMemoApp.swift */,
 				4F43A4DA290AD08300185DE5 /* MemoListScene.swift */,
 				4F43A4DC290AD08400185DE5 /* Assets.xcassets */,
@@ -144,9 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F43A4E2290AD08400185DE5 /* Persistence.swift in Sources */,
+				4F17ADC22911450400F6CAAA /* MemoStore.swift in Sources */,
 				4F43A4E5290AD08400185DE5 /* PractiveUIMemo.xcdatamodeld in Sources */,
 				4F43A4DB290AD08300185DE5 /* MemoListScene.swift in Sources */,
 				4F43A4D9290AD08300185DE5 /* PractiveUIMemoApp.swift in Sources */,
+				4F17ADC02911443A00F6CAAA /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
