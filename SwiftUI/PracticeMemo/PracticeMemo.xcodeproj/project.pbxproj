@@ -17,6 +17,7 @@
 		4FD60D9D29115793002BAC30 /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD60D9C29115793002BAC30 /* MemoStore.swift */; };
 		4FD60DA029120788002BAC30 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD60D9F29120788002BAC30 /* MemoCell.swift */; };
 		4FD60DA229120801002BAC30 /* ComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD60DA129120801002BAC30 /* ComposeView.swift */; };
+		4FD60DA429120A7D002BAC30 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD60DA329120A7D002BAC30 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4FD60D9C29115793002BAC30 /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
 		4FD60D9F29120788002BAC30 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 		4FD60DA129120801002BAC30 /* ComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeView.swift; sourceTree = "<group>"; };
+		4FD60DA329120A7D002BAC30 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				4FD60D9629115686002BAC30 /* MainListView.swift */,
 				4FD60D9F29120788002BAC30 /* MemoCell.swift */,
 				4FD60DA129120801002BAC30 /* ComposeView.swift */,
+				4FD60DA329120A7D002BAC30 /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FD60DA029120788002BAC30 /* MemoCell.swift in Sources */,
+				4FD60DA429120A7D002BAC30 /* DetailView.swift in Sources */,
 				4FD60D8829115635002BAC30 /* PracticeMemo.xcdatamodeld in Sources */,
 				4FD60D9D29115793002BAC30 /* MemoStore.swift in Sources */,
 				4FD60D9729115686002BAC30 /* MainListView.swift in Sources */,
