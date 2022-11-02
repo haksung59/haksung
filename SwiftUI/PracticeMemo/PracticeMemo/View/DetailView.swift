@@ -37,7 +37,7 @@ struct DetailView: View {
         .navigationTitle("메모 보기")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItemGroup(placement: .bottomBar){
+            ToolbarItemGroup(placement: .automatic){
                 Button {
                     showDeleteAlert = true
                 } label: {
