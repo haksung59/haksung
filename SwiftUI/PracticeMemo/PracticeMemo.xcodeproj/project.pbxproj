@@ -15,6 +15,7 @@
 		4FD60D9729115686002BAC30 /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD60D9629115686002BAC30 /* MainListView.swift */; };
 		4FD60D9B29115715002BAC30 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD60D9A29115715002BAC30 /* Memo.swift */; };
 		4FD60D9D29115793002BAC30 /* MemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD60D9C29115793002BAC30 /* MemoStore.swift */; };
+		4FD60DA029120788002BAC30 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD60D9F29120788002BAC30 /* MemoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4FD60D9629115686002BAC30 /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
 		4FD60D9A29115715002BAC30 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		4FD60D9C29115793002BAC30 /* MemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStore.swift; sourceTree = "<group>"; };
+		4FD60D9F29120788002BAC30 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		4FD60D8129115635002BAC30 /* PracticeMemo */ = {
 			isa = PBXGroup;
 			children = (
+				4FD60D9E2912077A002BAC30 /* View */,
 				4FD60D99291156A5002BAC30 /* Memory */,
 				4FD60D982911569E002BAC30 /* CoreData */,
 				4FD60D8429115635002BAC30 /* Persistence.swift */,
@@ -95,6 +98,14 @@
 				4FD60D9C29115793002BAC30 /* MemoStore.swift */,
 			);
 			path = Memory;
+			sourceTree = "<group>";
+		};
+		4FD60D9E2912077A002BAC30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4FD60D9F29120788002BAC30 /* MemoCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD60DA029120788002BAC30 /* MemoCell.swift in Sources */,
 				4FD60D8829115635002BAC30 /* PracticeMemo.xcdatamodeld in Sources */,
 				4FD60D9D29115793002BAC30 /* MemoStore.swift in Sources */,
 				4FD60D9729115686002BAC30 /* MainListView.swift in Sources */,
