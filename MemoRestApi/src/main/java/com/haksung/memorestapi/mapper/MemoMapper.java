@@ -10,4 +10,12 @@ public interface MemoMapper {
 
     List<MemoDto> getMemo();
 
+    MemoDto getMemoDetail(int id);
+
+    void postMemo(MemoDto memo);
+
+    void putMemo(MemoDto memo);
+
+    void deleteMemo(MemoDto memo);
+
 }
