@@ -12,6 +12,7 @@ struct FavoriteButton: View {
     
     var body: some View {
         Button {
+            print("hi")
             isSet.toggle()
         } label: {
             Label("Toggle Favorite", systemImage: isSet ? "star.fill" : "star")

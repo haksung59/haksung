@@ -9,7 +9,8 @@ import Foundation
 import Combine
 
 final class ModelData: ObservableObject{
-    @Published var landmarks: [Landmark] = load("landmarkData.json")
+    @Published var landmarks: [Landmark] = getLandmarks()
+//    load("landmarkData.json")
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
@@ -32,4 +33,20 @@ func load<T: Decodable>(_ filename: String) -> T {
     }catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
+}
+
+func getLandmarks<T: Codable>() -> T{
+    let url = URL(string: "http://localhost:8080/landmarks")
+    var response:String
+    do {
+        response = try String(contentsOf: url!)
+    }catch{ fatalError("Invalid URL!") }
+    
+    do {
+        let decoder = JSONDecoder()
+        return try decoder.decode(T.self, from: response.data(using: .utf8)!)
+    }catch{
+        fatalError("Could not decode")
+    }
+    
 }
