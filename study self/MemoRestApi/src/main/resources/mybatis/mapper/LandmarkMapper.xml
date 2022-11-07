@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-mybatis.orgDTD Mapper 3.OEN"  "http:mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.haksung.memorestapi.mapper.LandmarkMapper">
+
+    <insert id="postLandmark" parameterType="com.haksung.memorestapi.dto.LandmarkDto">
+        insert into landmark (
+            name,
+            category,
+            city,
+            state,
+            id,
+            isFeatured,
+            isFavorite,
+            park,
+            description,
+            imageName
+        )
+        values (
+            #{name},
+            #{category},
+            #{city},
+            #{state},
+            #{id},
+            #{isFeatured},
+            #{isFavorite},
+            #{park},
+            #{description},
+            #{imageName}
+        )
+    </insert>
+
+    <insert id="postCoordinate" parameterType="com.haksung.memorestapi.dto.CoordinatesDto">
+        insert into coordinates (
+            id,
+            longitude,
+            latitude
+        )
+        values (
+            #{id},
+            truncate(#{longitude}, 6),
+            truncate(#{latitude}, 6)
+        )
+    </insert>
+
+    <resultMap id="landmarks" type="com.haksung.memorestapi.dto.LandmarkDto">
+        <id property="name" column="name"/>
+        <id property="category" column="category"/>
+        <id property="city" column="city"/>
+        <id property="state" column="state"/>
+        <id property="id" column="id"/>
+        <id property="isFeatured" column="isFeatured"/>
+        <id property="isFavorite" column="isFavorite"/>
+        <id property="park" column="park"/>
+        <id property="description" column="description"/>
+        <id property="imageName" column="imageName"/>
+        <association property="coordinates"
+                     javaType="com.haksung.memorestapi.dto.CoordinatesDto">
+            <id property="id" column="id"/>
+            <result property="longitude" column="longitude"/>
+            <result property="latitude" column="latitude"/>
+        </association>
+    </resultMap>
+
+    <select id="getLandmarks" resultMap="landmarks">
+        select
+            l.name,
+            l.category,
+            l.city,
+            l.state,
+            l.id,
+            l.isFeatured,
+            l.isFavorite,
+            l.park,
+            l.description,
+            l.imageName,
+            c.longitude,
+            c.latitude
+        from
+            landmark l
+        left join
+            coordinates c
+        on
+            l.id = c.id
+    </select>
+
+</mapper>
