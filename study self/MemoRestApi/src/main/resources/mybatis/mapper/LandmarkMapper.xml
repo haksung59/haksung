@@ -83,4 +83,11 @@
             l.id = c.id
     </select>
 
+    <update id="putLandmark" parameterType="com.haksung.memorestapi.dto.LandmarkDto">
+        update landmark set
+            isFavorite = #{isFavorite}
+        where
+            id = #{id}
+    </update>
+
 </mapper>

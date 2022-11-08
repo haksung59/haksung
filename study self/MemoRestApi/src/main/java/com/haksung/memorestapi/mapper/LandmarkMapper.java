@@ -15,4 +15,6 @@ public interface LandmarkMapper {
 
     List<LandmarkDto> getLandmarks();
 
+    void putLandmark(LandmarkDto request);
+
 }

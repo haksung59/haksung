@@ -53,4 +53,13 @@ public class LandmarkService {
         return response;
     }
 
+    public String putLandmark(LandmarkDto request){
+        try {
+            mapper.putLandmark(request);
+            return "success";
+        }catch (Exception e){
+            return e.getMessage();
+        }
+    }
+
 }
