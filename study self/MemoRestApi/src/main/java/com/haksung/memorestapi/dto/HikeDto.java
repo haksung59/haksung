@@ -10,7 +10,7 @@ public class HikeDto {
     private String name;
     private int id;
     private float distance;
-    private int difficulty;
+    private float difficulty;
     private List<ObservationDto> observations;
 
 }

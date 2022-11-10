@@ -67,23 +67,6 @@
             id = #{id}
     </update>
 
-    <resultMap id="hikes" type="com.haksung.memorestapi.dto.HikeDto">
-        <id property="name" column="name"/>
-        <id property="id" column="id"/>
-        <id property="distance" column="distance"/>
-        <id property="difficulty" column="difficulty"/>
-        <association property="obserations"
-                     javaType="com.haksung.memorestapi.dto.ObservationDto">
-            <result property="elevation1" column="elevation1"/>
-            <result property="elevation2" column="elevation2"/>
-            <result property="pace1" column="pace1"/>
-            <result property="pace2" column="pace2"/>
-            <result property="heartRate1" column="heartRate1"/>
-            <result property="heartRate2" column="heartRate2"/>
-            <result property="distanceFromStart" column="distanceFromStart"/>
-        </association>
-    </resultMap>
-
     <insert id="postHike" parameterType="com.haksung.memorestapi.dto.HikeDto">
         insert into hike (
             name, id, distance, difficulty
@@ -100,13 +83,46 @@
             )
             values
             (
-                #{id}, #{observation.seq}, truncate(#{observation.elevation1}, 14), truncate(#{observation.elevation2}, 14),
-                truncate(#{observation.pace1}, 14), truncate(#{observation.pace2}, 14),
-                truncate(#{observation.heartRate1}, 14), truncate(#{observation.heartRate2}, 14),
+                #{id}, #{observation.seq}, truncate(#{observation.elevation1}, 17), truncate(#{observation.elevation2}, 17),
+                truncate(#{observation.pace1}, 17), truncate(#{observation.pace2}, 17),
+                truncate(#{observation.heartRate1}, 17), truncate(#{observation.heartRate2}, 17),
                 truncate(#{observation.distanceFromStart}, 3)
             );
         </foreach>
-
     </insert>
+
+    <resultMap id="hikes" type="com.haksung.memorestapi.dto.HikeDto">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="distance" property="distance"/>
+        <result column="difficulty" property="difficulty"/>
+        <collection property="observations" resultMap="observationList"/>
+    </resultMap>
+
+    <resultMap id="observationList" type="com.haksung.memorestapi.dto.ObservationDto">
+        <result column="elevation1" property="elevation1"/>
+        <result column="elevation2" property="elevation2"/>
+        <result column="pace1" property="pace1"/>
+        <result column="pace2" property="pace2"/>
+        <result column="heartRate1" property="heartRate1"/>
+        <result column="heartRate2" property="heartRate2"/>
+        <result column="distanceFromStart" property="distanceFromStart"/>
+    </resultMap>
+
+    <select id="getHikes" resultMap="hikes">
+        select
+            h.name, h.id, h.distance, h.difficulty,
+            o.id,
+            o.elevation1, o.elevation2, o.pace1, o.pace2,
+            o.heartRate1, o.heartRate2, o.distanceFromStart
+        from
+            hike h
+        left join
+            observations o
+        on
+            h.id = o.id
+        order by
+            h.id, o.seq
+    </select>
 
 </mapper>

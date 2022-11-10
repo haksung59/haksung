@@ -2,7 +2,6 @@ package com.haksung.memorestapi.service;
 
 import com.haksung.memorestapi.dto.HikeDto;
 import com.haksung.memorestapi.dto.LandmarkDto;
-import com.haksung.memorestapi.dto.ObservationDto;
 import com.haksung.memorestapi.mapper.LandmarkMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -81,6 +80,19 @@ public class LandmarkService {
         }catch (Exception e){
             return e.getMessage();
         }
+    }
+
+    public List<HikeDto> getHikes() {
+        List<HikeDto> response;
+
+        try {
+            response = mapper.getHikes();
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            response = null;
+        }
+
+        return response;
     }
 
 }

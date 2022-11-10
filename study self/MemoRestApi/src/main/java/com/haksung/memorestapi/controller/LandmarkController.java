@@ -32,4 +32,7 @@ public class LandmarkController {
     @PostMapping("/hikes")
     String postHikeList(@RequestBody List<HikeDto> request){ return service.postHikeList(request); }
 
+    @GetMapping("/hikes")
+    List<HikeDto> getHikes() { return service.getHikes(); }
+
 }

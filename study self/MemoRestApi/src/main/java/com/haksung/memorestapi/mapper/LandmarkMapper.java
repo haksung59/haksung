@@ -17,4 +17,6 @@ public interface LandmarkMapper {
 
     void postHike(HikeDto request);
 
+    List<HikeDto> getHikes();
+
 }
