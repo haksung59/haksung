@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 final class ModelData: ObservableObject{
-    @Published var landmarks: [Landmark] = getLandmarks()
-    var hikes: [Hike] = load("hikeData.json")
+    @Published var landmarks: [Landmark] = getData(url: URL(string: "http://localhost:8080/landmarks")!)
+    var hikes: [Hike] = getData(url: URL(string: "http://localhost:8080/hikes")!)
     @Published var profile = Profile.default
     
     var features: [Landmark] {
@@ -47,11 +47,10 @@ func load<T: Decodable>(_ filename: String) -> T {
     }
 }
 
-func getLandmarks<T: Codable>() -> T{
-    let url = URL(string: "http://localhost:8080/landmarks")
+func getData<T: Codable>(url: URL) -> T{
     var response:String
     do {
-        response = try String(contentsOf: url!)
+        response = try String(contentsOf: url)
     }catch{ fatalError("Invalid URL!") }
     
     do {
