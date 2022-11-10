@@ -1,9 +1,8 @@
 package com.haksung.memorestapi.mapper;
 
-import com.haksung.memorestapi.dto.CoordinatesDto;
-import com.haksung.memorestapi.dto.LandmarkDto;
-import com.haksung.memorestapi.dto.MemoDto;
+import com.haksung.memorestapi.dto.*;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -11,10 +10,11 @@ import java.util.List;
 public interface LandmarkMapper {
 
     void postLandmark(LandmarkDto request);
-    void postCoordinate(CoordinatesDto request);
 
     List<LandmarkDto> getLandmarks();
 
     void putLandmark(LandmarkDto request);
+
+    void postHike(HikeDto request);
 
 }

@@ -1,5 +1,6 @@
 package com.haksung.memorestapi.controller;
 
+import com.haksung.memorestapi.dto.HikeDto;
 import com.haksung.memorestapi.dto.LandmarkDto;
 import com.haksung.memorestapi.service.LandmarkService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +25,11 @@ public class LandmarkController {
 
     @PutMapping("/landmark")
     String putLandmark(@RequestBody LandmarkDto request){ return service.putLandmark(request); }
+
+    @PostMapping("/hike")
+    String postHike(@RequestBody HikeDto request) { return service.postHike(request); }
+
+    @PostMapping("/hikes")
+    String postHikeList(@RequestBody List<HikeDto> request){ return service.postHikeList(request); }
 
 }

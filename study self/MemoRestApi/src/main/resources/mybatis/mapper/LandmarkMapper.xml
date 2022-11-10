@@ -2,46 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-mybatis.orgDTD Mapper 3.OEN"  "http:mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.haksung.memorestapi.mapper.LandmarkMapper">
 
-    <insert id="postLandmark" parameterType="com.haksung.memorestapi.dto.LandmarkDto">
-        insert into landmark (
-            name,
-            category,
-            city,
-            state,
-            id,
-            isFeatured,
-            isFavorite,
-            park,
-            description,
-            imageName
-        )
-        values (
-            #{name},
-            #{category},
-            #{city},
-            #{state},
-            #{id},
-            #{isFeatured},
-            #{isFavorite},
-            #{park},
-            #{description},
-            #{imageName}
-        )
-    </insert>
-
-    <insert id="postCoordinate" parameterType="com.haksung.memorestapi.dto.CoordinatesDto">
-        insert into coordinates (
-            id,
-            longitude,
-            latitude
-        )
-        values (
-            #{id},
-            truncate(#{longitude}, 6),
-            truncate(#{latitude}, 6)
-        )
-    </insert>
-
     <resultMap id="landmarks" type="com.haksung.memorestapi.dto.LandmarkDto">
         <id property="name" column="name"/>
         <id property="category" column="category"/>
@@ -55,11 +15,27 @@
         <id property="imageName" column="imageName"/>
         <association property="coordinates"
                      javaType="com.haksung.memorestapi.dto.CoordinatesDto">
-            <id property="id" column="id"/>
-            <result property="longitude" column="longitude"/>
-            <result property="latitude" column="latitude"/>
+<!--            <id property="id" column="id"/>-->
+            <id property="longitude" column="longitude"/>
+            <id property="latitude" column="latitude"/>
         </association>
     </resultMap>
+
+    <insert id="postLandmark" parameterType="com.haksung.memorestapi.dto.LandmarkDto">
+        insert into landmark (
+            name, category, city, state, id, isFeatured, isFavorite, park, description, imageName
+        )
+        values (
+            #{name}, #{category}, #{city}, #{state}, #{id}, #{isFeatured}, #{isFavorite}, #{park}, #{description}, #{imageName}
+        );
+
+        insert into coordinates (
+            id, longitude, latitude
+        )
+        values (
+            #{id}, truncate(#{coordinates.longitude}, 6), truncate(#{coordinates.latitude}, 6)
+        );
+    </insert>
 
     <select id="getLandmarks" resultMap="landmarks">
         select
@@ -85,9 +61,52 @@
 
     <update id="putLandmark" parameterType="com.haksung.memorestapi.dto.LandmarkDto">
         update landmark set
-            isFavorite = #{isFavorite}
+            isFavorite = #{isFavorite},
+            isFeatured = #{isFeatured}
         where
             id = #{id}
     </update>
+
+    <resultMap id="hikes" type="com.haksung.memorestapi.dto.HikeDto">
+        <id property="name" column="name"/>
+        <id property="id" column="id"/>
+        <id property="distance" column="distance"/>
+        <id property="difficulty" column="difficulty"/>
+        <association property="obserations"
+                     javaType="com.haksung.memorestapi.dto.ObservationDto">
+            <result property="elevation1" column="elevation1"/>
+            <result property="elevation2" column="elevation2"/>
+            <result property="pace1" column="pace1"/>
+            <result property="pace2" column="pace2"/>
+            <result property="heartRate1" column="heartRate1"/>
+            <result property="heartRate2" column="heartRate2"/>
+            <result property="distanceFromStart" column="distanceFromStart"/>
+        </association>
+    </resultMap>
+
+    <insert id="postHike" parameterType="com.haksung.memorestapi.dto.HikeDto">
+        insert into hike (
+            name, id, distance, difficulty
+        )
+        values (
+            #{name}, #{id}, truncate(#{distance}, 1), #{difficulty}
+        );
+
+        <foreach collection="observations" item="observation">
+            insert into observations(
+                id, seq, elevation1, elevation2,
+                pace1, pace2, heartRate1, heartRate2,
+                distanceFromStart
+            )
+            values
+            (
+                #{id}, #{observation.seq}, truncate(#{observation.elevation1}, 14), truncate(#{observation.elevation2}, 14),
+                truncate(#{observation.pace1}, 14), truncate(#{observation.pace2}, 14),
+                truncate(#{observation.heartRate1}, 14), truncate(#{observation.heartRate2}, 14),
+                truncate(#{observation.distanceFromStart}, 3)
+            );
+        </foreach>
+
+    </insert>
 
 </mapper>

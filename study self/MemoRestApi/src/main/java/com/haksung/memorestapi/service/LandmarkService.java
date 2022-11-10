@@ -1,6 +1,8 @@
 package com.haksung.memorestapi.service;
 
+import com.haksung.memorestapi.dto.HikeDto;
 import com.haksung.memorestapi.dto.LandmarkDto;
+import com.haksung.memorestapi.dto.ObservationDto;
 import com.haksung.memorestapi.mapper.LandmarkMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,8 +19,6 @@ public class LandmarkService {
 
         try {
             mapper.postLandmark(request);
-            request.getCoordinates().setId(request.getId());
-            mapper.postCoordinate(request.getCoordinates());
             return "success";
         }catch (Exception e){
             return e.getMessage();
@@ -31,8 +31,6 @@ public class LandmarkService {
         try {
             for(LandmarkDto request : requestList) {
                 mapper.postLandmark(request);
-                request.getCoordinates().setId(request.getId());
-                mapper.postCoordinate(request.getCoordinates());
             }
             return "success";
         }catch (Exception e){
@@ -56,6 +54,29 @@ public class LandmarkService {
     public String putLandmark(LandmarkDto request){
         try {
             mapper.putLandmark(request);
+            return "success";
+        }catch (Exception e){
+            return e.getMessage();
+        }
+    }
+
+    public String postHike(HikeDto request){
+        try {
+            for(int i=0; i<request.getObservations().size(); i++){
+                request.getObservations().get(i).setSeq(i+1);
+            }
+            mapper.postHike(request);
+            return "success";
+        }catch (Exception e) {
+            return e.getMessage();
+        }
+    }
+
+    public String postHikeList(List<HikeDto> request){
+        try {
+            for (HikeDto hike : request) {
+                postHike(hike);
+            }
             return "success";
         }catch (Exception e){
             return e.getMessage();

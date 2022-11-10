@@ -7,11 +7,11 @@ import lombok.Data;
 @Data
 public class CoordinatesDto {
 
-    @JsonIgnore
-    int id;
+//    @JsonIgnore
+//    private int id;
 
-    double longitude;
+    private double longitude;
 
-    double latitude;
+    private double latitude;
 
 }

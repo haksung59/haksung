@@ -6,18 +6,18 @@ import lombok.Data;
 @Data
 public class LandmarkDto {
 
-    String name;
-    String category;
-    String city;
-    String state;
-    int id;
+    private String name;
+    private String category;
+    private String city;
+    private String state;
+    private int id;
     @JsonProperty("isFeatured")
-    boolean isFeatured;
+    private boolean isFeatured;
     @JsonProperty("isFavorite")
-    boolean isFavorite;
-    String park;
-    CoordinatesDto coordinates;
-    String description;
-    String imageName;
+    private boolean isFavorite;
+    private String park;
+    private CoordinatesDto coordinates;
+    private String description;
+    private String imageName;
 
 }
