@@ -84,7 +84,6 @@ func putLandmark(paramText: Landmark) -> Void {
         
         // HTTP 메시지 헤더
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.setValue(String(paramData.count), forHTTPHeaderField: "Content-Length")
         
         // URLSession 객체를 통해 전송, 응답값 처리
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
