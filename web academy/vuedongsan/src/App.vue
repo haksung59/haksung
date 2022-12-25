@@ -1,9 +1,10 @@
-<template>
+<template id="main-page">
 
   <div class="black-bg" v-if="모달창열렸니">
     <div class="white-bg">
-      <h4>상세페이지임</h4>
-      <p>상세페이지 내용임</p>
+      <h4>{{ products[clickNo].title }}}</h4>
+      <img class="modalImg" :src="products[clickNo].image">
+      <p>{{ products[clickNo].content }}</p>
       <button @click="modal">닫기</button>
     </div>
   </div>
@@ -14,11 +15,10 @@
 
   <img alt="Vue logo" src="./assets/logo.png">
   원룸샵
-  <div v-for="(a,i) in products" :key="i">
-    <img :src="products[i].image" class="room-img">
-    <h4 @click="modal()">{{ products[i].title }}</h4>
-    <p>{{ products[i].price }} 만원</p>
-    <button @click="increase(i)">허위매물신고</button> <span>신고수 : {{ 신고수[i] }}</span>
+  <div v-for="(product,i) in products" :key="i">
+    <img :src="product.image" class="room-img">
+    <h4 @click="modal(i)">{{ product.title }}</h4>
+    <p>{{ product.price }} 원</p>
   </div>
 </template>
 
@@ -31,16 +31,17 @@ export default {
   data(){
     return {
       모달창열렸니 : false,
-      신고수 : [0, 0, 0, 0, 0, 0],
-      products : data
+      products : data,
+      clickNo : 0,
     }
   },
   methods : {
     increase(i) {
       this.신고수[i]++
     },
-    modal(){
+    modal(i){
       this.모달창열렸니 = !this.모달창열렸니
+      this.clickNo = i
     }
   },
   components: {
@@ -86,6 +87,9 @@ div {
 .room-img {
   width: 100%;
   margin-top: 40px;
+}
+.modalImg {
+  width: 100%;
 }
 
 </style>
