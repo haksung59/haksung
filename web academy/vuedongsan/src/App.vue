@@ -1,50 +1,42 @@
 <template id="main-page">
 
-  <div class="black-bg" v-if="모달창열렸니">
-    <div class="white-bg">
-      <h4>{{ products[clickNo].title }}}</h4>
-      <img class="modalImg" :src="products[clickNo].image">
-      <p>{{ products[clickNo].content }}</p>
-      <button @click="modal">닫기</button>
-    </div>
-  </div>
+  <Modal :products="products" :isOpenModal="isOpenModal" :clickNo="clickNo" :modal="modal"/>
 
   <div class="menu">
     <a v-for="menuidx in pages" :key="menuidx">{{ menuidx }}</a>
   </div>
 
-  <img alt="Vue logo" src="./assets/logo.png">
-  원룸샵
-  <div v-for="(product,i) in products" :key="i">
-    <img :src="product.image" class="room-img">
-    <h4 @click="modal(i)">{{ product.title }}</h4>
-    <p>{{ product.price }} 원</p>
-  </div>
+  <Discount />
+  <Card :products="products" :isOpenModal="isOpenModal" :clickNo="clickNo" :modal="modal"/>
+
 </template>
 
 <script>
 
 import data from './assets/oneroom.js';
+import Discount from "./Discount.vue";
+import Modal from "./Modal.vue";
+import Card from "./Card.vue";
 
 export default {
   name: 'App',
   data(){
     return {
-      모달창열렸니 : false,
+      isOpenModal : false,
       products : data,
       clickNo : 0,
     }
   },
   methods : {
-    increase(i) {
-      this.신고수[i]++
-    },
     modal(i){
-      this.모달창열렸니 = !this.모달창열렸니
+      this.isOpenModal = !this.isOpenModal
       this.clickNo = i
     }
   },
   components: {
+    Discount,
+    Modal,
+    Card,
   }
 }
 </script>
@@ -64,6 +56,14 @@ body {
 div {
   box-sizing: border-box;
 }
+
+.discount {
+  background: #eee;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
 .black-bg{
   width: 100%; height: 100%;
   background: rgba(0,0,0,0.5);
