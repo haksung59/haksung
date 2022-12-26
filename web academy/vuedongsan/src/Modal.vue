@@ -1,10 +1,13 @@
 <template>
-  <div class="black-bg" v-if="isOpenModal">
+  <div class="black-bg">
     <div class="white-bg">
-      <h4>{{ products[clickNo].title }}}</h4>
-      <img class="modalImg" :src="products[clickNo].image">
-      <p>{{ products[clickNo].content }}</p>
-      <button @click="modal">닫기</button>
+      <h4>{{ product.title }}}</h4>
+      <img class="modalImg" :src="product.image">
+      <p>{{ product.content }}</p>
+<!--      <input @input="month = $event.target.value">-->
+      <input v-model.number="month">
+      <p> {{ month }}개월 선택함 : {{ month * product.price }}원</p>
+      <button @click="$emit('closeModal')">닫기</button>
     </div>
   </div>
 </template>
@@ -13,11 +16,30 @@
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: 'Modal',
+  data(){
+    return {
+      month: 3,
+    }
+  },
+  watch : {
+    month(a){
+      if(a > 12) {
+        alert('3~12의 숫자를 입력해주세요.')
+        this.month = 3
+      }else if(isNaN(a)){
+        alert('숫자만 입력하시오.')
+        this.month = 3
+      }
+    },
+  },
+  beforeUpdate() {
+    if(this.month < 3) {
+      alert('3개월부터 예약 가능합니다.')
+      this.month = 3
+    }
+  },
   props: {
-    products: Array,
-    isOpenModal: Boolean,
-    clickNo: Number,
-    modal: Function,
+    product: Object,
   }
 }
 </script>
