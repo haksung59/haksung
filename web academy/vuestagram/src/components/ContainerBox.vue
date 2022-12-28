@@ -5,7 +5,7 @@
     </div>
 
     <div v-if="showContent==1">
-      <div class="upload-image" :style="`background-image : url(${uploadImage})`"/>
+      <div :class="selectFilter" class="upload-image" :style="`background-image : url(${uploadImage})`"/>
       <div class="filters">
         <FilterBox v-for="filter in filters" :key="filter" :uploadImage="uploadImage" :filter="filter">
         </FilterBox>
@@ -13,7 +13,7 @@
     </div>
 
     <div v-if="showContent==2">
-      <div class="upload-image"
+      <div :class="selectFilter" class="upload-image"
            :style="`background-image : url(${uploadImage})`" />
       <div class="write">
         <textarea @input="$emit('write', $event.target.value)"
@@ -22,12 +22,17 @@
       </div>
     </div>
 
+    <div v-if="showContent==3">
+      <MyPage />
+    </div>
+
   </div>
 </template>
 
 <script>
 import PostBox from './PostBox.vue';
 import FilterBox from './FilterBox.vue';
+import MyPage from "./MyPage.vue";
 
 export default{
   name: 'ContainerBox',
@@ -44,9 +49,10 @@ export default{
     postData: Array,
     showContent: Number,
     uploadImage: String,
+    selectFilter: String,
   },
   components: {
-    PostBox, FilterBox
+    PostBox, FilterBox, MyPage
   }
 }
 </script>

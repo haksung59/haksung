@@ -5,10 +5,11 @@
            v-bind:style="{ backgroundImage : 'url( '+postOne.userImage+' )' }"/>
       <span class="profile-name">{{ postOne.name }}</span>
     </div>
-    <div class="post-body"
+    <div :class="postOne.filter" class="post-body"
+         @click="$store.commit('changeLikes')"
          v-bind:style="{ backgroundImage: 'url(' + postOne.postImage + ')' }"/>
     <div class="post-content">
-      <p>{{postOne.likes}} Likes</p>
+      <p>{{ $store.state.likes }} Likes</p>
       <p><strong>{{ postOne.filter }}</strong> {{postOne.content}}</p>
       <p class="date">{{postOne.date}}</p>
     </div>

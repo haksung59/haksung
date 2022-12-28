@@ -10,9 +10,14 @@
     <img src="./assets/logo.png" class="logo" />
   </div>
 
-  <ContainerBox :postData="postData" :showContent="showContent"
+  <ContainerBox :postData="postData" :showContent="showContent" :selectFilter="selectFilter"
                 :uploadImage="uploadImage" @write="writedContent=$event"/>
-  <button @click="more">더보기</button>
+<!--  <button @click="more">더보기</button>-->
+
+  <p>{{now()}}</p>
+  <p>{{now2}} / {{counter}}</p>
+  <p>{{name}}</p>
+  <button @click="counter++">버튼</button>
 
   <div class="footer">
     <ul class="footer-button-plus">
@@ -21,9 +26,11 @@
     </ul>
   </div>
 
-  <button @click="changeContent(0)">버튼0</button>
-  <button @click="changeContent(1)">버튼1</button>
-  <button @click="changeContent(2)">버튼2</button>
+  <h4>안녕 {{ $store.state.name }}</h4>
+  <button @click="changeName('hi')">change</button>
+
+  <p>{{ $store.state.more }}</p>
+  <button @click="$store.dispatch('getData')">더보기버튼</button>
 
 </template>
 
@@ -31,6 +38,7 @@
 import ContainerBox from './components/ContainerBox.vue';
 import postData from './assets/data.json';
 import axios from 'axios';
+import {mapState, mapMutations} from 'vuex';
 
 export default {
   name: 'App',
@@ -39,15 +47,35 @@ export default {
       postData: postData,
       postDataOriginal: [...postData],
       clickTimes: 0,
-      showContent: 0,
+      showContent: 3,
       uploadImage: null,
       writedContent: "",
+      selectFilter: "",
+      counter: 0,
     }
+  },
+  mounted(){
+    this.emitter.on('fire', (a)=>{
+      this.selectFilter = a;
+    })
   },
   components: {
     ContainerBox
   },
+  computed: {
+    name(){
+      return this.$store.state.name;
+    },
+    ...mapState(['isLikes', 'age', "likes"]),
+    now2(){
+      return new Date();
+    },
+  },
   methods: {
+    ...mapMutations(['changeName']),
+    now() {
+      return new Date();
+    },
     more() {
       this.clickTimes++
       if (this.clickTimes % 2 == 1) {
@@ -80,11 +108,12 @@ export default {
         "date": "Today",
         "liked": false,
         "content": this.writedContent,
-        "filter": "Haksung59"
+        "filter": this.selectFilter
       };
       this.postData.unshift(publishItem);
       this.showContent = 0;
-      this.uploadImage=null;
+      this.uploadImage = null;
+      this.selectFilter = null;
     }
   }
 }
