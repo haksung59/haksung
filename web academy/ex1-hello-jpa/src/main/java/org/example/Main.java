@@ -15,13 +15,22 @@ public class Main {
         tx.begin();
 
         try {
-            Member member = em.find(Member.class, 150L);
-            member.setName("zzzZZZzzZ");
+            Member member = new Member();
+            member.setUsername("A");
 
-            System.out.println("================");
+            Member member2 = new Member();
+            member2.setUsername("haksung");
+
+            Member member3 = new Member();
+            member3.setUsername("chanik");
+
+            em.persist(member);
+            em.persist(member2);
+            em.persist(member3);
 
             tx.commit();
         }catch(Exception e){
+            System.out.println("rollback");
             tx.rollback();
         }finally {
             em.close();

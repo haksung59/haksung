@@ -1,37 +1,46 @@
 package org.example;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
+@SequenceGenerator(
+        name = "MEMBER_SEQ_GENERATOR",
+        initialValue = 1, allocationSize = 50,
+        sequenceName = "MEMBER_SEQ"
+)
 public class Member {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MEMBER_SEQ_GENERATOR")
     private Long id;
-    private String name;
 
-    public Member(){
+    @Column(name="name", nullable = false)
+    private String username;
 
+    public String getUsername() {
+        return username;
     }
 
-    public Member(Long id, String name) {
-        this.id = id;
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public Long getId() {
-        return id;
-    }
+    //    private int age;
+//    @Enumerated(EnumType.STRING)
+//    private RoleType roleType;
+//    @Temporal(TemporalType.TIMESTAMP)
+//    private Date createdDate;
+//    @Temporal(TemporalType.TIMESTAMP)
+//    private Date lastModifiedDate;
+//
+//    private LocalDate testLocalDate;
+//
+//    private LocalDateTime testLocalDateTime;
+//    @Lob
+//    private String description;
+    public Member(){}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
