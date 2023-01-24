@@ -1,24 +1,41 @@
 package org.example;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 @Entity
-@SequenceGenerator(
-        name = "MEMBER_SEQ_GENERATOR",
-        initialValue = 1, allocationSize = 50,
-        sequenceName = "MEMBER_SEQ"
-)
 public class Member {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "MEMBER_SEQ_GENERATOR")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name="name", nullable = false)
+    @Column(name = "USERNAME")
     private String username;
+
+    @ManyToOne
+    @JoinColumn(name = "TEAM_ID")
+    private Team team;
+
+    @OneToOne
+    @JoinColumn(name = "LOCKER_ID")
+    private Locker locker;
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public void changeTeam(Team team) {
+        this.team = team;
+        team.getMembers().add(this);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;
@@ -28,19 +45,15 @@ public class Member {
         this.username = username;
     }
 
-    //    private int age;
-//    @Enumerated(EnumType.STRING)
-//    private RoleType roleType;
-//    @Temporal(TemporalType.TIMESTAMP)
-//    private Date createdDate;
-//    @Temporal(TemporalType.TIMESTAMP)
-//    private Date lastModifiedDate;
+//    public Long getTeamId() {
+//        return teamId;
+//    }
 //
-//    private LocalDate testLocalDate;
+//    public void setTeamId(Long teamId) {
+//        this.teamId = teamId;
+//    }
 //
-//    private LocalDateTime testLocalDateTime;
-//    @Lob
-//    private String description;
-    public Member(){}
+//    @Column(name = "TEAM_ID")
+//    private Long teamId;
 
 }
