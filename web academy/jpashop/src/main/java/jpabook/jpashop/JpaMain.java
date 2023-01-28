@@ -1,5 +1,7 @@
 package jpabook.jpashop;
 
+import jpabook.jpashop.domain.Book;
+import jpabook.jpashop.domain.Member;
 import jpabook.jpashop.domain.Order;
 
 import javax.persistence.EntityManager;
@@ -17,8 +19,7 @@ public class JpaMain {
         tx.begin();
 
         try {
-            Order order = new Order();
-
+            Member member = em.find(Member.class, 11);
 
             tx.commit();
         }catch(Exception e){
@@ -30,4 +31,6 @@ public class JpaMain {
 
         emf.close();
     }
+
+
 }

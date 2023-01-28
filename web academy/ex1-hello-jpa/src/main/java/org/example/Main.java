@@ -4,7 +4,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,38 +15,15 @@ public class Main {
         tx.begin();
 
         try {
-//            Team team = new Team();
-//            team.setName("TeamA");
-//            em.persist(team);
-//
-//            Member member = new Member();
-//            member.setUsername("member1");
-//            member.changeTeam(team);
-//            em.persist(member);
-//
-//            em.flush();
-//            em.clear();
-//            System.out.println("------------");
-//
-//            Member findMember = em.find(Member.class, member.getId());
-//            List<Member> members = findMember.getTeam().getMembers();
-//
-//            for(Member m : members){
-//                System.out.println("m : " + m.getUsername());
-//            }
 
-            Album album = new Album();
-            album.setName("hi");
-            album.setArtist("hihihi");
-            album.setPrice(3000);
-
-            em.persist(album);
-
-            em.flush();
-            em.clear();
-
-            Album findAlbum = em.find(Album.class, album.getId());
-            System.out.println(findAlbum.getArtist());
+//            Child child1 = new Child();
+//            Child child2 = new Child();
+//
+//            Parent parent = new Parent();
+//            parent.addChild(child1);
+//            parent.addChild(child2);
+//
+//            em.persist(parent);
 
             tx.commit();
         }catch(Exception e){

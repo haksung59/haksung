@@ -5,24 +5,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Team{
+public class Parent {
 
     @Id
     @GeneratedValue
-    @Column(name = "TEAM_ID")
     private Long id;
     private String name;
 
-//    @OneToMany(mappedBy = "team")
-//    private List<Member> members = new ArrayList<>();
+    @OneToMany(mappedBy = "parent", cascade = CascadeType.ALL)
+    private List<Child> childList = new ArrayList<>();
 
-//    public List<Member> getMembers() {
-//        return members;
-//    }
-
-//    public void setMembers(List<Member> members) {
-//        this.members = members;
-//    }
+    public void addChild(Child child){
+        childList.add(child);
+        child.setParent(this);
+    }
 
     public Long getId() {
         return id;
@@ -39,5 +35,4 @@ public class Team{
     public void setName(String name) {
         this.name = name;
     }
-
 }
