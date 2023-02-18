@@ -17,8 +17,11 @@ public class Main {
         try {
 
             Member member = new Member();
-            member.setUsername("hello");
-            member.setHomeAddress(new Address("city", "street", "hi"));
+            member.setUsername("member1");
+            member.setHomeAddress(new Address("city1", "street", "zipCode"));
+
+            member.getAddressHistory().add(new Address("old1", "street", "zipCdoe"));
+            member.getAddressHistory().add(new Address("old2", "street", "zipCdoe"));
 
             em.persist(member);
 
