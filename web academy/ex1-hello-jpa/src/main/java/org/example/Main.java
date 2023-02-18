@@ -16,14 +16,11 @@ public class Main {
 
         try {
 
-//            Child child1 = new Child();
-//            Child child2 = new Child();
-//
-//            Parent parent = new Parent();
-//            parent.addChild(child1);
-//            parent.addChild(child2);
-//
-//            em.persist(parent);
+            Member member = new Member();
+            member.setUsername("hello");
+            member.setHomeAddress(new Address("city", "street", "hi"));
+
+            em.persist(member);
 
             tx.commit();
         }catch(Exception e){
