@@ -13,28 +13,29 @@ public class JpaMain {
         tx.begin();
 
         try {
-                Team team = new Team();
-                team.setName("teamA");
-                em.persist(team);
+
+                Team teamA = new Team();
+                teamA.setName("teamA");
 
 
                 Member member = new Member();
-                member.setUsername("member1");
+                member.setUsername("ghldnjs1");
                 member.setAge(10);
                 member.setType(MemberType.ADMIN);
 
-                member.changeTeam(team);
-
                 em.persist(member);
 
+                em.flush();
+                em.clear();
+
 //            em.createQuery("select o.address from Order o")
-//                            .getResultList();
-//                            .setParameter("username", "member1")
+////                            .getResultList();
+////                            .setParameter("username", "member1")
 //                            .getSingleResult();
-
-            em.flush();
-            em.clear();
-
+//
+//            em.flush();
+//            em.clear();
+//
             String query = "select m.username, 'HELLO', true from Member m " +
                     "where m.type = :userType";
 

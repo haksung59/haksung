@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5bee76ff-160f-4a48-9c32-52155f12bb4c" name="Changes" comment="jpa study 230218">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studyJPQL/src/main/java/org/example/jpql/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studyJPQL/src/main/java/org/example/jpql/JpaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studyJPQL/src/main/java/org/example/jpql/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studyJPQL/src/main/java/org/example/jpql/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studyJPQL/src/main/java/org/example/jpql/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studyJPQL/src/main/java/org/example/jpql/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studyJPQL/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../studyJPQL/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studyJPQL/target/classes/org/example/jpql/JpaMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../studyJPQL/target/classes/org/example/jpql/JpaMain.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +83,7 @@
       <workItem from="1674534194025" duration="78000" />
       <workItem from="1674534296938" duration="30516000" />
       <workItem from="1676957401729" duration="398000" />
+      <workItem from="1677038235524" duration="768000" />
     </task>
     <task id="LOCAL-00001" summary="230114 jpa study">
       <created>1673690025935</created>
