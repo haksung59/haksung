@@ -1,9 +1,10 @@
 package com.study.jpapractice.repository;
 
 import com.study.jpapractice.entity.User;
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 @Repository
 public class UserRepository {

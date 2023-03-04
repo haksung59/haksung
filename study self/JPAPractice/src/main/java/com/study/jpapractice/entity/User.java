@@ -1,12 +1,12 @@
 package com.study.jpapractice.entity;
 
-import jakarta.persistence.*;
 import lombok.*;
+import javax.persistence.*;
 
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class User {
 
     @Id
@@ -32,9 +32,9 @@ public class User {
 
     @Column(name = "user_type")
     @Enumerated(EnumType.STRING)
-    private UserType userType;
+    private UserType userType = UserType.ROLE_USER;
 
     @Column(name = "useyn")
-    private String useYn;
+    private String useYn = "y";
 
 }
