@@ -3,7 +3,6 @@ package com.study.jpapractice.service;
 import com.study.jpapractice.common.SHA256;
 import com.study.jpapractice.entity.User;
 import com.study.jpapractice.repository.UserRepository;
-//import com.study.jpapractice.util.JwtUtil;
 import com.study.jpapractice.util.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,6 +22,10 @@ public class UserService {
 
     @Transactional
     public String join(User user) throws Exception{
+
+        SHA256 sha256 = new SHA256();
+
+        user.setPassword(sha256.encrypt(user.getPassword()));
 
         repository.save(user);
 
@@ -45,6 +48,11 @@ public class UserService {
             return e.getMessage();
         }
 
+    }
+
+    @Transactional
+    public String doubleCheck(String userId){
+        return repository.find(userId) == null ? "Available" : "Unavailable";
     }
 
 }
