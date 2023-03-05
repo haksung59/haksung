@@ -1,6 +1,7 @@
 package com.study.jpapractice.controller;
 
 import com.study.jpapractice.entity.User;
+import com.study.jpapractice.response.ResponseDto;
 import com.study.jpapractice.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class UserController {
     }
 
     @GetMapping ("/all/doubleCheck")
-    public String doubleCheck(@RequestParam String userId ) throws Exception {
+    public ResponseDto doubleCheck(@RequestParam String userId ) throws Exception {
         return service.doubleCheck(userId);
     }
     @PostMapping("/all/login")

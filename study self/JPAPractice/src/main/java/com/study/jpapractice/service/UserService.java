@@ -3,6 +3,7 @@ package com.study.jpapractice.service;
 import com.study.jpapractice.common.SHA256;
 import com.study.jpapractice.entity.User;
 import com.study.jpapractice.repository.UserRepository;
+import com.study.jpapractice.response.ResponseDto;
 import com.study.jpapractice.util.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
@@ -51,8 +52,13 @@ public class UserService {
     }
 
     @Transactional
-    public String doubleCheck(String userId){
-        return repository.find(userId) == null ? "Available" : "Unavailable";
+    public ResponseDto doubleCheck(String userId){
+        try{
+            User findUser =  repository.find(userId);
+            return findUser == null ? new ResponseDto("01", "Available") : new ResponseDto("01", "Unavailable");
+        }catch (Exception e){
+            return new ResponseDto("02", e.getMessage());
+        }
     }
 
 }
