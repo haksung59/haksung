@@ -3,7 +3,7 @@ import 'package:flutter_toonflix/screens/home_screen.dart';
 import 'package:flutter_toonflix/services/api_service.dart';
 
 void main() {
-  ApiService().getTodaysToons();
+  ApiService.getTodaysToons();
   runApp(const App());
 }
 
@@ -17,7 +17,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: HomeScreen(),
     );
   }
 }

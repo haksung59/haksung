@@ -6,11 +6,12 @@ import 'package:flutter_toonflix/models/webtoon_model.dart';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  final String baseUrl = "https://webtoon-crawler.nomadcoders.workers.dev/";
-  final String today = "today";
+  static final String baseUrl =
+      "https://webtoon-crawler.nomadcoders.workers.dev/";
+  static final String today = "today";
 
   // Future<List<WebtoonModel>> getTodaysToons() async {
-  Future<ResponseModel> getTodaysToons() async {
+  static Future<ResponseModel> getTodaysToons() async {
     // List<WebtoonModel> webtoonInstances = [];
     ResponseModel responseInstance;
     // final url = Uri.parse('$baseUrl/$today');
