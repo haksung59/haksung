@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_toonflix/models/response_model.dart';
-
-import '../models/webtoon_model.dart';
-import '../services/api_service.dart';
+import 'package:flutter_toonflix/models/webtoon_model.dart';
+import 'package:flutter_toonflix/services/api_service.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
-  // Future<List<WebtoonModel>> webtoons = ApiService.getTodaysToons();
-  Future<ResponseModel> response = ApiService.getTodaysToons();
+  final Future<List<WebtoonModel>> webtoons = ApiService.getTodaysToons();
 
   @override
   Widget build(BuildContext context) {
@@ -22,18 +19,74 @@ class HomeScreen extends StatelessWidget {
           '오늘의 웹툰',
           style: TextStyle(
             fontSize: 24,
-            fontWeight: FontWeight.w400,
           ),
         ),
       ),
       body: FutureBuilder(
-        future: response,
+        future: webtoons,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return Text("There is data!");
+            return Column(
+              children: [
+                const SizedBox(
+                  height: 50,
+                ),
+                Expanded(
+                  child: makeList(snapshot),
+                )
+              ],
+            );
           }
-          return Text('Loading...');
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
         },
+      ),
+    );
+  }
+
+  ListView makeList(AsyncSnapshot<List<WebtoonModel>> snapshot) {
+    return ListView.separated(
+      scrollDirection: Axis.horizontal,
+      itemCount: snapshot.data!.length,
+      padding: const EdgeInsets.symmetric(
+        vertical: 10,
+        horizontal: 20,
+      ),
+      itemBuilder: (context, index) {
+        var webtoon = snapshot.data![index];
+        return Column(
+          children: [
+            Container(
+              width: 250,
+              height: 300,
+              clipBehavior: Clip.hardEdge,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius: 3,
+                    offset: const Offset(10, 10),
+                    color: Colors.black.withOpacity(0.3),
+                  )
+                ],
+              ),
+              child: Image.network(
+                webtoon.thumb,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              webtoon.title,
+              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
+            ),
+          ],
+        );
+      },
+      separatorBuilder: (context, index) => const SizedBox(
+        width: 40,
       ),
     );
   }
