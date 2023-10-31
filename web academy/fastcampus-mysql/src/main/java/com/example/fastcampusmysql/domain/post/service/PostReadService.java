@@ -13,6 +13,8 @@ import java.util.List;
 public class PostReadService {
     final private PostRepository postRepository;
 
-
+    public List<DailyPostCount> getDailyPostCount(DailyPostCountRequest request) {
+        return postRepository.groupByCreatedDate(request);
+    }
 
 }
