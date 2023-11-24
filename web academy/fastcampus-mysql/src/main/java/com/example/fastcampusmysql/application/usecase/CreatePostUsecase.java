@@ -19,13 +19,13 @@ public class CreatePostUsecase {
     public Long execute(PostCommand postCommand) {
         var postId = postWriteService.create(postCommand);
 
-        var followMemberId = followReadService
-                .getFollowings(postCommand.memberId())
+        var followerMemberId = followReadService
+                .getFollowers(postCommand.memberId())
                 .stream()
                 .map(Follow::getFromMemberId)
                 .toList();
 
-        timelineWriteService.deliveryToTimeline(postId, followMemberId);
+        timelineWriteService.deliveryToTimeline(postId, followerMemberId);
 
         return postId;
     }
