@@ -7,6 +7,7 @@ import com.example.fastcampusmysql.domain.member.repository.MemberNicknameHistor
 import com.example.fastcampusmysql.domain.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @RequiredArgsConstructor
 @Service
@@ -16,22 +17,18 @@ public class MemberWriteService {
 
     final private MemberNicknameHistoryRepository memberNicknameHistoryRepository;
 
+    @Transactional
     public Member create(RegisterMemberCommand command) {
-        /**
-         * 목표 - 회원정보(이메일, 닉네임, 생년월일)를 등록한다.
-         *     - 닉네임은 10자를 넘길 수 없다.
-         * 파라미터 - memberRegisterCommand
-         *
-         * val member = Member.of(memberRegisterCommand)
-         * memberRepository.save()
-         */
         var member = Member.builder()
                 .nickname(command.nickname())
                 .email(command.email())
                 .birthday(command.birthday())
                 .build();
 
-        return memberRepository.save(member);
+        var savedMember = memberRepository.save(member);
+//        var zero = 0/0;
+        saveMemberNicknameHistory(savedMember);
+        return savedMember;
     }
 
     public void changeNickname(Long memberId, String nickname) {

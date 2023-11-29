@@ -25,4 +25,6 @@ public class TimelineWriteService {
         return Timeline.builder().memberId(memberId).postId(postId).build();
     }
 
+
+
 }
